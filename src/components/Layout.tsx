@@ -51,13 +51,22 @@ export default function Layout() {
               Método 5D
             </button>
             <button
+              onClick={() => scrollTo('dinamica')}
+              className={cn(
+                'text-sm font-semibold hover:text-accent transition-colors',
+                scrolled ? 'text-gray-700' : 'text-white/90',
+              )}
+            >
+              Dinâmica & Lab
+            </button>
+            <button
               onClick={() => scrollTo('entregaveis')}
               className={cn(
                 'text-sm font-semibold hover:text-accent transition-colors',
                 scrolled ? 'text-gray-700' : 'text-white/90',
               )}
             >
-              Entregáveis
+              14 Entregáveis
             </button>
             <button
               onClick={() => scrollTo('publico')}
@@ -69,13 +78,13 @@ export default function Layout() {
               Para Quem É
             </button>
             <button
-              onClick={() => scrollTo('mentalidade')}
+              onClick={() => scrollTo('principios')}
               className={cn(
                 'text-sm font-semibold hover:text-accent transition-colors',
                 scrolled ? 'text-gray-700' : 'text-white/90',
               )}
             >
-              Mentalidade
+              Princípios
             </button>
             <button
               onClick={() => scrollTo('contato')}
@@ -125,22 +134,28 @@ export default function Layout() {
               Método 5D
             </button>
             <button
+              onClick={() => scrollTo('dinamica')}
+              className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
+            >
+              Dinâmica & Formato (16 contatos)
+            </button>
+            <button
               onClick={() => scrollTo('entregaveis')}
               className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
             >
-              Entregáveis
+              14 Entregáveis Oficiais
+            </button>
+            <button
+              onClick={() => scrollTo('principios')}
+              className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
+            >
+              6 Princípios do 5D
             </button>
             <button
               onClick={() => scrollTo('publico')}
               className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
             >
-              Para Quem É
-            </button>
-            <button
-              onClick={() => scrollTo('mentalidade')}
-              className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
-            >
-              Mudança de Mentalidade
+              Para Quem É / Não É
             </button>
             <button
               onClick={() => scrollTo('contato')}
@@ -179,13 +194,19 @@ export default function Layout() {
           <div className="md:col-span-5">
             <img
               src={logoImage}
-              alt="Edvanced Logo"
+              alt="EDVANCED Consultoria & Desenvolvimento"
               className="h-auto w-32 md:w-36 mb-4 object-contain"
             />
-            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-              Construa uma esteira estratégica de produtos e serviços que transforme sua expertise
-              em ofertas organizadas, conectadas e capazes de conduzir o cliente da primeira compra
-              à solução premium.
+            <p className="text-xs uppercase tracking-wider font-bold text-accent mb-2">
+              EDVANCED | Esteira de Valor 5D
+            </p>
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm mb-4">
+              Programa de construção e implementação desenvolvido para transformar conhecimentos,
+              experiências e soluções em uma esteira estratégica de produtos e serviços.
+            </p>
+            <p className="text-xs text-gray-500 italic max-w-sm border-l-2 border-accent/40 pl-3">
+              "EDVANCED CONSULTORIA & DESENVOLVIMENTO — Da expertise à construção de uma jornada
+              estratégica de valor."
             </p>
           </div>
           <div className="md:col-span-3">
@@ -201,10 +222,26 @@ export default function Layout() {
               </li>
               <li>
                 <button
+                  onClick={() => scrollTo('dinamica')}
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Dinâmica & Formato
+                </button>
+              </li>
+              <li>
+                <button
                   onClick={() => scrollTo('entregaveis')}
                   className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
-                  Principais Entregáveis
+                  14 Entregáveis Oficiais
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollTo('principios')}
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Princípios do 5D
                 </button>
               </li>
               <li>
@@ -213,14 +250,6 @@ export default function Layout() {
                   className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
                   Para Quem É / Não É
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollTo('mentalidade')}
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Mudança de Mentalidade
                 </button>
               </li>
               <li>
@@ -280,10 +309,16 @@ export default function Layout() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="container mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-left">
+            <p className="font-semibold text-gray-400">EDVANCED CONSULTORIA & DESENVOLVIMENTO</p>
+            <p className="text-[11px] text-gray-500">
+              EDVANCED | Esteira de Valor 5D — Do serviço solto à jornada estratégica de valor.
+            </p>
+          </div>
           <span>
-            © {new Date().getFullYear()} Esteira de Valor 5D • Ediane Dalbosco. Todos os direitos
-            reservados.
+            © {new Date().getFullYear()} EDVANCED • Esteira de Valor 5D • Ediane Dalbosco. Todos os
+            direitos reservados.
           </span>
         </div>
       </footer>

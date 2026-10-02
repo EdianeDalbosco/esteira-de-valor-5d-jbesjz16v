@@ -96,23 +96,23 @@ const METHOD_STEPS = [
   {
     step: '1º D',
     name: 'DIAGNÓSTICO',
-    question: 'Descubra o que tem',
-    deliverable: 'Mapa de Ativos de Valor',
+    question: 'Descobrir o valor',
+    deliverable: 'Raio-X + Mapa de Ativos de Valor',
     icon: Search,
     highlight: true, // Alinhado diretamente com a chamada estratégica
   },
   {
     step: '2º D',
     name: 'DIRECIONAMENTO',
-    question: 'Defina para quem',
-    deliverable: 'Público Estratégico & Posicionamento',
+    question: 'Definir onde gerar valor',
+    deliverable: 'Mapa do Cliente + Posicionamento',
     icon: Compass,
     highlight: false,
   },
   {
     step: '3º D',
     name: 'DESENHO',
-    question: 'Construa a esteira',
+    question: 'Arquitetar a Esteira',
     deliverable: 'Mapa da Esteira de Valor (6 camadas)',
     icon: Layers,
     highlight: false,
@@ -120,16 +120,16 @@ const METHOD_STEPS = [
   {
     step: '4º D',
     name: 'DESENVOLVIMENTO',
-    question: 'Transforme em ofertas',
-    deliverable: 'Estrutura Estratégica das Ofertas',
+    question: 'Transformar valor em ofertas',
+    deliverable: 'Ficha das Ofertas + Matriz & Preço',
     icon: Boxes,
     highlight: false,
   },
   {
     step: '5º D',
     name: 'DECOLAGEM',
-    question: 'Coloque em movimento',
-    deliverable: 'Plano de Ativação & Roadmap',
+    question: 'Colocar a Esteira em movimento',
+    deliverable: 'Plano de Decolagem + Roadmap 30-60-90',
     icon: Rocket,
     highlight: false,
   },
@@ -236,11 +236,13 @@ export default function ThankYou() {
                   </h2>
 
                   <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-2xl">
-                    Uma sessão individual e confidencial com nosso time de estratégia para mapear os
-                    seus ativos de valor e desenhar a arquitetura de ofertas ideal para o seu
-                    momento de negócio — correspondente ao{' '}
-                    <strong className="text-accent font-semibold">1º D (Diagnóstico)</strong> da
-                    metodologia.
+                    Uma sessão individual e confidencial que serve como o ponto de partida do{' '}
+                    <strong className="text-accent font-semibold">
+                      1º D (Diagnóstico — Descobrir o valor)
+                    </strong>{' '}
+                    da metodologia oficial, dando início ao seu <em>Raio-X do Negócio</em> e ao{' '}
+                    <em>Mapa de Ativos de Valor</em> para desenhar a arquitetura ideal de ofertas
+                    para o seu momento.
                   </p>
 
                   {/* O que acontece na chamada */}
@@ -251,10 +253,11 @@ export default function ThankYou() {
                       </div>
                       <div>
                         <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                          Mapeamento de Ativos
+                          Raio-X do Negócio & Ativos
                         </h4>
                         <p className="text-xs text-gray-300 leading-snug">
-                          Inventário de conhecimentos, diferenciais e oportunidades ocultas.
+                          Ponto de partida do 1º D: inventário de expertise, diferenciais e
+                          oportunidades ocultas.
                         </p>
                       </div>
                     </div>
@@ -265,10 +268,11 @@ export default function ThankYou() {
                       </div>
                       <div>
                         <h4 className="text-xs font-bold text-white uppercase tracking-wider">
-                          Desenho da Esteira
+                          Arquitetura Inicial da Esteira
                         </h4>
                         <p className="text-xs text-gray-300 leading-snug">
-                          Sequência lógica de ofertas (Entrada → Principal → Recorrência → Premium).
+                          Primeiro alinhamento da jornada lógica (Entrada → Principal → Recorrência
+                          → Premium).
                         </p>
                       </div>
                     </div>
@@ -596,9 +600,11 @@ export default function ThankYou() {
 
       {/* Footer simples de encerramento */}
       <footer className="w-full bg-white border-t border-gray-200 py-6 px-4 text-center text-xs text-gray-500">
+        <p className="font-semibold text-gray-600 mb-0.5">
+          EDVANCED CONSULTORIA & DESENVOLVIMENTO | Esteira de Valor 5D
+        </p>
         <p>
-          © {new Date().getFullYear()} Esteira de Valor 5D • Ediane Dalbosco. Todos os direitos
-          reservados.
+          © {new Date().getFullYear()} EDVANCED • Ediane Dalbosco. Todos os direitos reservados.
         </p>
       </footer>
     </div>

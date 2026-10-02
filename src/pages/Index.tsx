@@ -30,7 +30,8 @@ import mentorImage from '@/assets/as-portas-estao-1-21a63.png'
 import heroPhoto from '@/assets/img7990-74f78.jpg'
 
 const WHATSAPP_URL = 'https://wa.me/5565981003969'
-const SITE_TITLE = 'Esteira de Valor 5D | Arquitetura Estratégica de Produtos e Serviços'
+const SITE_TITLE =
+  'EDVANCED | Esteira de Valor 5D — Do serviço solto à jornada estratégica de valor'
 
 const MAIN_PAINS = [
   {
@@ -238,15 +239,21 @@ export default function Index() {
             <ScrollReveal>
               <div className="text-center mb-10">
                 <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-2 block">
-                  O Conceito do Programa
+                  EDVANCED | Programa Oficial de Construção e Implementação
                 </span>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
                   Mais do que criar novos produtos: organizar sua expertise em uma{' '}
                   <span className="text-accent">arquitetura de valor</span>
                 </h2>
-                <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                  Para especialistas e empreendedores que já entregam resultados de alto nível, mas
-                  ainda comercializam soluções isoladas, sem conexão estratégica.
+                <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                  O <strong>Esteira de Valor 5D</strong> é um programa de construção e implementação
+                  desenvolvido para{' '}
+                  <strong>
+                    empreendedores, especialistas, consultores, mentores, profissionais liberais e
+                    prestadores de serviços
+                  </strong>{' '}
+                  que desejam transformar seus conhecimentos, experiências e soluções em uma esteira
+                  estratégica de produtos e serviços.
                 </p>
               </div>
             </ScrollReveal>
@@ -425,30 +432,38 @@ export default function Index() {
                   </h3>
 
                   <div className="bg-white p-3.5 rounded-xl border border-gray-200 mb-5 font-mono text-xs text-gray-700 leading-relaxed shadow-inner">
-                    Conhecimento <span className="text-red-500 font-bold">→</span> Serviço{' '}
-                    <span className="text-red-500 font-bold">→</span> Venda{' '}
-                    <span className="text-red-500 font-bold">→</span> Execução{' '}
-                    <span className="text-red-500 font-bold">→</span> Recomeço do zero
+                    Conhecimento <span className="text-red-500 font-bold">→</span> Criação de um
+                    serviço <span className="text-red-500 font-bold">→</span> Venda{' '}
+                    <span className="text-red-500 font-bold">→</span> Entrega{' '}
+                    <span className="text-red-500 font-bold">→</span> Encerramento{' '}
+                    <span className="text-red-500 font-bold">→</span> Busca por outro cliente
                   </div>
 
-                  <ul className="space-y-3 text-gray-600 text-xs sm:text-sm">
-                    <li className="flex items-start gap-2.5">
-                      <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                      <span>Vende o que aparece, reagindo à demanda externa</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                      <span>Opera com catálogo disperso de produtos desconectados</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
-                      <span>Dependência constante de novos clientes todo mês</span>
-                    </li>
+                  <ul className="grid sm:grid-cols-2 gap-2.5 text-gray-600 text-xs sm:text-sm">
+                    {[
+                      'serviços desconectados',
+                      'excesso de personalização',
+                      'várias ideias sem direção',
+                      'dificuldade para definir prioridades',
+                      'dependência da própria hora',
+                      'baixa recorrência',
+                      'clientes que finalizam e saem',
+                      'dificuldade para desenvolver uma oferta premium',
+                      'pouca clareza de posicionamento',
+                      'precificação baseada predominantemente em execução',
+                      'necessidade constante de conquistar novos clientes',
+                    ].map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <XCircle className="w-3.5 h-3.5 text-red-500 shrink-0 mt-0.5" />
+                        <span className="capitalize">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-500 italic">
-                  Resultado: alto desgaste operacional e faturamento imprevisível.
+                  O empreendedor pensa apenas: <em>"O que mais eu posso vender?"</em> gerando
+                  constante recomeço do zero.
                 </div>
               </ScrollReveal>
 
@@ -461,36 +476,38 @@ export default function Index() {
                 <div>
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent text-primary text-[11px] font-bold uppercase tracking-wider mb-4">
                     <CheckCircle2 className="w-3.5 h-3.5" />
-                    Com a Esteira de Valor 5D (Depois)
+                    Com o Esteira de Valor 5D (Depois)
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-white mb-4">
-                    Uma jornada estruturada que conduz o cliente
+                    Uma jornada estratégica de valor
                   </h3>
 
                   <div className="bg-[#18233C] p-3.5 rounded-xl border border-accent/30 mb-5 font-mono text-xs text-accent leading-relaxed shadow-inner font-semibold">
-                    Posicionamento → Entrada → Solução Principal → Recorrência → Premium →
-                    Continuidade
+                    Posicionamento → Atração → Oferta de Entrada → Solução Principal → Recorrência →
+                    Premium → Continuidade
                   </div>
 
-                  <ul className="space-y-3 text-gray-200 text-xs sm:text-sm">
-                    <li className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                      <span>Condução estratégica do cliente da primeira compra ao premium</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                      <span>Arquitetura de valor em vez de catálogo desconectado</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                      <span>Previsibilidade de faturamento com recompra e continuidade</span>
-                    </li>
-                  </ul>
+                  <div className="bg-accent/10 border border-accent/30 p-3.5 rounded-xl mb-4 text-xs font-semibold text-accent leading-relaxed">
+                    Posicionamento claro + Proposta de valor + Portfólio estratégico + Produtos
+                    estruturados + Jornada do cliente + Recorrência + Oferta premium + Plano de
+                    execução ={' '}
+                    <span className="underline uppercase font-extrabold text-white">
+                      ESTEIRA DE VALOR
+                    </span>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-gray-200 leading-relaxed mb-3 font-normal">
+                    O empreendedor deixa de pensar "o que mais vender" e passa a conduzir
+                    estrategicamente:
+                    <strong className="text-white block mt-1">
+                      "Qual é a próxima transformação que o meu cliente precisa?"
+                    </strong>
+                  </p>
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-white/10 text-xs text-accent font-medium">
-                  Em essência: Você deixa de vender o que aparece e passa a conduzir
-                  estrategicamente o cliente.
+                  Frase central: "A principal transformação é sair de serviços soltos para uma
+                  jornada estratégica de soluções."
                 </div>
               </ScrollReveal>
             </div>
@@ -563,13 +580,18 @@ export default function Index() {
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 O Método <span className="text-accent">5D</span>
               </h2>
-              <p className="text-lg md:text-xl text-accent font-medium mb-3">
-                "Diagnosticar o potencial. Direcionar o valor. Desenhar a estratégia. Desenvolver as
-                ofertas. Decolar para o mercado."
-              </p>
-              <p className="text-base text-gray-300 font-light">
-                Cinco etapas encadeadas onde cada uma responde a uma pergunta central e gera
-                entregas práticas para o seu negócio.
+              <div className="bg-accent/15 border border-accent/40 rounded-2xl p-4 my-4 max-w-2xl mx-auto backdrop-blur-sm">
+                <span className="text-[11px] uppercase tracking-wider font-bold text-accent block mb-1">
+                  Frase Oficial do Método
+                </span>
+                <p className="text-base sm:text-lg md:text-xl text-white font-extrabold leading-snug">
+                  "Diagnostique o potencial. Direcione o valor. Desenhe a estratégia. Desenvolva as
+                  ofertas. Decole para o mercado."
+                </p>
+              </div>
+              <p className="text-base text-gray-300 font-light max-w-2xl mx-auto">
+                Cinco grandes decisões encadeadas onde cada uma responde a uma pergunta central e
+                gera entregas práticas para a arquitetura comercial do seu negócio.
               </p>
             </div>
           </ScrollReveal>
@@ -620,21 +642,106 @@ export default function Index() {
                       1º D — DIAGNÓSTICO
                     </span>
                     <span className="text-base font-semibold text-gray-300">
-                      "Descubra o que você tem"
+                      "Descobrir o valor"
                     </span>
                   </div>
 
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                    Investigação profunda do negócio, do conhecimento e dos ativos
+                    Investigação profunda dos ativos, da expertise e das oportunidades
                   </h3>
 
-                  <p className="text-gray-300 text-base leading-relaxed mb-6">
-                    Identifica conhecimentos, experiências, competências, especializações, métodos,
-                    soluções já oferecidas, produtos existentes, serviços atuais, histórico de
-                    clientes, problemas que resolve, diferenciais e oportunidades não monetizadas.
-                    Analisa o que consome tempo, tem baixa margem ou não faz sentido continuar
-                    oferecendo.
+                  <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-5">
+                    Antes de criar novas soluções, o empreendedor precisa compreender os ativos que
+                    já possui. O Diagnóstico investiga o negócio atual, a expertise acumulada e as
+                    oportunidades ainda não transformadas em produtos ou receita.
                   </p>
+
+                  {/* Itens investigados */}
+                  <div className="mb-6 bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5">
+                    <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2.5">
+                      Itens investigados nesta etapa:
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-2 text-xs text-gray-300">
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Conhecimentos,
+                        experiências, competências e formações
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Vivências,
+                        metodologias e processos
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Produtos e
+                        serviços atuais
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Materiais já
+                        produzidos e resultados já gerados
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Principais
+                        solicitações dos clientes
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Problemas que
+                        o profissional sabe resolver
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Soluções com
+                        maior demanda ou melhor margem
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Serviços com
+                        alto esforço e baixa rentabilidade
+                      </span>
+                      <span className="flex items-center gap-1.5 sm:col-span-2">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Oportunidades
+                        ainda não exploradas
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* As Quatro Lentes de Análise */}
+                  <div className="mb-6">
+                    <p className="text-xs font-bold text-accent uppercase tracking-wider mb-3">
+                      Quatro Lentes de Análise do 1º D:
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      <div className="bg-[#1B2640] p-3.5 rounded-xl border border-white/5">
+                        <span className="text-xs font-bold text-white block mb-0.5">🔍 Valor</span>
+                        <p className="text-xs text-gray-300">
+                          Quanto valor essa solução gera ou pode gerar?
+                        </p>
+                      </div>
+                      <div className="bg-[#1B2640] p-3.5 rounded-xl border border-white/5">
+                        <span className="text-xs font-bold text-white block mb-0.5">
+                          ⚡ Esforço
+                        </span>
+                        <p className="text-xs text-gray-300">
+                          Quanto tempo, energia e estrutura ela exige?
+                        </p>
+                      </div>
+                      <div className="bg-[#1B2640] p-3.5 rounded-xl border border-white/5">
+                        <span className="text-xs font-bold text-white block mb-0.5">
+                          💰 Rentabilidade
+                        </span>
+                        <p className="text-xs text-gray-300">Ela possui viabilidade financeira?</p>
+                      </div>
+                      <div className="bg-[#1B2640] p-3.5 rounded-xl border border-white/5">
+                        <span className="text-xs font-bold text-white block mb-0.5">
+                          📈 Potencial
+                        </span>
+                        <p className="text-xs text-gray-300">
+                          Existe possibilidade de recorrência, escala, reposicionamento ou evolução?
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-3 bg-accent/10 border border-accent/30 rounded-xl mb-6 text-xs text-accent">
+                    <strong>Decisões ao final do 1º D:</strong> Clareza absoluta sobre o que manter,
+                    reposicionar, potencializar, transformar, eliminar e criar.
+                  </div>
 
                   <div className="grid md:grid-cols-2 gap-4 pt-4 border-t border-white/10">
                     <div className="bg-[#1B2640] p-4 rounded-xl border border-white/5">
@@ -642,13 +749,13 @@ export default function Index() {
                         Pergunta Central:
                       </p>
                       <p className="text-sm md:text-base font-semibold text-white italic">
-                        "O que existe hoje no seu conhecimento e no seu negócio que pode ser
+                        "O que existe hoje no meu conhecimento e no meu negócio que pode ser
                         transformado em valor?"
                       </p>
                     </div>
                     <div className="bg-[#1B2640] p-4 rounded-xl border border-white/5 flex flex-col justify-center">
                       <p className="text-xs uppercase font-bold text-accent tracking-wider mb-1">
-                        Entrega da Etapa:
+                        Principal Entrega:
                       </p>
                       <p className="text-sm md:text-base font-bold text-accent">
                         Mapa de Ativos de Valor
@@ -677,20 +784,56 @@ export default function Index() {
                       2º D — DIRECIONAMENTO
                     </span>
                     <span className="text-base font-semibold text-gray-300">
-                      "Defina para quem e onde gerar valor"
+                      "Definir onde gerar valor"
                     </span>
                   </div>
 
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                    Público estratégico, território de atuação e proposta central
+                    Conhecimento sem direcionamento tende a gerar produtos genéricos
                   </h3>
 
-                  <p className="text-gray-300 text-base leading-relaxed mb-6">
-                    Define o público prioritário, cliente ideal, dores centrais, necessidades,
-                    desejos, transformação principal, território de atuação, diferenciais,
-                    posicionamento e proposta de valor. O objetivo é evitar produtos genéricos para
-                    públicos amplos e construir foco cirúrgico no mercado.
+                  <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-5">
+                    Nesta etapa, definimos o território estratégico do negócio para evitar a
+                    armadilha de criar soluções genéricas que competem por preço.
                   </p>
+
+                  <div className="mb-5 bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5">
+                    <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2.5">
+                      Território estratégico definido:
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-2 text-xs text-gray-300">
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Público
+                        prioritário e cliente ideal
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Situação
+                        atual, dores, necessidades e desejos
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Problema
+                        central e transformação desejada
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Resultado
+                        esperado e diferenciais
+                      </span>
+                      <span className="flex items-center gap-1.5 sm:col-span-2">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0" /> Posicionamento
+                        e proposta central de valor
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Fórmula Destacável */}
+                  <div className="mb-6 bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border-l-4 border-accent p-4 rounded-r-2xl">
+                    <span className="text-[11px] uppercase tracking-wider font-bold text-accent block mb-1">
+                      Fórmula Estratégica Oficial:
+                    </span>
+                    <p className="text-sm md:text-base font-mono font-bold text-white">
+                      PÚBLICO + PROBLEMA + TRANSFORMAÇÃO + DIFERENCIAL = PROPOSTA DE VALOR
+                    </p>
+                  </div>
 
                   <div className="grid md:grid-cols-2 gap-4 pt-4 border-t border-white/10">
                     <div className="bg-[#1B2640] p-4 rounded-xl border border-white/5">
@@ -698,8 +841,8 @@ export default function Index() {
                         Pergunta Central:
                       </p>
                       <p className="text-sm md:text-base font-semibold text-white italic">
-                        "Para quem você gera mais valor e por que esse cliente deveria escolher
-                        você?"
+                        "Para quem eu gero mais valor e por que essa pessoa deveria escolher minha
+                        solução?"
                       </p>
                     </div>
                     <div className="bg-[#1B2640] p-4 rounded-xl border border-white/5 flex flex-col justify-center">
@@ -707,7 +850,7 @@ export default function Index() {
                         Entregas da Etapa:
                       </p>
                       <p className="text-sm md:text-base font-bold text-accent">
-                        Definição do Público Estratégico, Posicionamento e Proposta Central de Valor
+                        Mapa do Cliente Estratégico + Posicionamento + Proposta Central de Valor
                       </p>
                     </div>
                   </div>
@@ -733,23 +876,66 @@ export default function Index() {
                       3º D — DESENHO
                     </span>
                     <span className="text-base font-semibold text-gray-300">
-                      "Construa a arquitetura da sua esteira"
+                      "Arquitetar a Esteira de Valor"
                     </span>
                   </div>
 
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                    Transforme produtos isolados em uma jornada estruturada
+                    Deixar de olhar cada produto isoladamente para observar o papel de cada um na
+                    jornada
                   </h3>
 
-                  <p className="text-gray-300 text-base leading-relaxed mb-6">
-                    Aplica a lógica sequencial:{' '}
-                    <strong>
-                      Atração → Oferta de Entrada → Solução Principal → Recorrência → Oferta Premium
-                      → Continuidade
-                    </strong>
-                    . Nem todo negócio precisa de todas as ofertas; o objetivo é a sequência mais
-                    inteligente para o seu modelo de negócio, garantindo que cada solução responda a
-                    uma nova necessidade natural do cliente.
+                  <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-5">
+                    Depois de compreender o valor existente e definir onde queremos gerar
+                    transformação, construímos a arquitetura das ofertas. Nesta etapa, deixamos de
+                    olhar para cada produto isoladamente e passamos a observar qual papel cada
+                    solução exerce dentro da jornada.
+                  </p>
+
+                  {/* As 6 Camadas da Esteira em lista limpa e discreta */}
+                  <div className="mb-6 bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5">
+                    <p className="text-xs font-bold text-accent uppercase tracking-wider mb-3">
+                      As 6 Camadas da Esteira de Valor:
+                    </p>
+                    <div className="space-y-2.5 text-xs text-gray-200">
+                      <div className="border-l-2 border-accent/60 pl-3">
+                        <strong className="text-white">1. Atração:</strong> Primeiro contato com o
+                        universo da marca por conteúdo, diagnóstico, evento, ferramenta ou
+                        experiência.
+                      </div>
+                      <div className="border-l-2 border-accent/60 pl-3">
+                        <strong className="text-white">2. Entrada:</strong> Primeira experiência
+                        comercial, reduzindo a barreira para conhecer a solução.
+                      </div>
+                      <div className="border-l-2 border-accent/60 pl-3">
+                        <strong className="text-white">3. Solução Principal:</strong> Oferta
+                        responsável pela principal transformação do negócio; o core da esteira.
+                      </div>
+                      <div className="border-l-2 border-accent/60 pl-3">
+                        <strong className="text-white">4. Recorrência:</strong> Acompanhamento,
+                        manutenção, suporte, desenvolvimento ou evolução continuada.
+                      </div>
+                      <div className="border-l-2 border-accent/60 pl-3">
+                        <strong className="text-white">5. Premium:</strong> Oferta de maior
+                        profundidade, personalização, proximidade ou impacto estratégico.
+                      </div>
+                      <div className="border-l-2 border-accent/60 pl-3">
+                        <strong className="text-white">6. Continuidade:</strong> Próximo ciclo da
+                        jornada para que o cliente continue evoluindo dentro do ecossistema.
+                      </div>
+                    </div>
+                  </div>
+
+                  <blockquote className="bg-accent/10 border-l-4 border-accent p-4 rounded-r-2xl text-xs md:text-sm text-gray-200 italic mb-5">
+                    "Não criamos produtos para preencher espaços. Criamos soluções quando existe uma
+                    necessidade legítima na jornada do cliente."
+                  </blockquote>
+
+                  <p className="text-xs text-gray-300 leading-relaxed mb-6">
+                    <strong className="text-white">Para cada oferta são definidos:</strong> função
+                    estratégica, público, problema atendido, transformação, momento da jornada,
+                    ticket, forma de entrega, relação com o produto anterior e próxima solução
+                    possível.
                   </p>
 
                   <div className="grid md:grid-cols-2 gap-4 pt-4 border-t border-white/10">
@@ -758,13 +944,13 @@ export default function Index() {
                         Pergunta Central:
                       </p>
                       <p className="text-sm md:text-base font-semibold text-white italic">
-                        "Qual é a jornada mais lógica para conduzir esse cliente dentro do meu
+                        "Qual é a jornada mais inteligente para conduzir meu cliente dentro do meu
                         negócio?"
                       </p>
                     </div>
                     <div className="bg-[#1B2640] p-4 rounded-xl border border-white/5 flex flex-col justify-center">
                       <p className="text-xs uppercase font-bold text-accent tracking-wider mb-1">
-                        Entrega da Etapa:
+                        Principal Entrega:
                       </p>
                       <p className="text-sm md:text-base font-bold text-accent">
                         Mapa da Esteira de Valor
@@ -793,21 +979,69 @@ export default function Index() {
                       4º D — DESENVOLVIMENTO
                     </span>
                     <span className="text-base font-semibold text-gray-300">
-                      "Transforme conhecimento em ofertas"
+                      "Transformar valor em ofertas"
                     </span>
                   </div>
 
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                    Uma ideia não é um produto: estruturação comercial completa
+                    Transformar o que foi desenhado em soluções claras, desejáveis e
+                    comercializáveis
                   </h3>
 
-                  <p className="text-gray-300 text-base leading-relaxed mb-6">
-                    Estrutura cada solução nos mínimos detalhes comerciais: nome, conceito, público,
-                    dor resolvida, promessa, transformação, método, formato, duração, etapas,
-                    escopo, entregáveis, experiência do cliente, diferenciais, preço, pacotes,
-                    ancoragem e posicionamento comercial. A transformação prática:{' '}
-                    <strong>Conhecimento → Solução → Produto → Oferta</strong>.
+                  <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-5">
+                    O Desenvolvimento organiza o conteúdo, a entrega e a proposta comercial de cada
+                    solução prioritária (Oferta de Entrada, Solução Principal, Oferta Premium,
+                    Recorrência e Continuidade, quando aplicável).
                   </p>
+
+                  {/* Campos Oficiais da Ficha Estratégica */}
+                  <div className="mb-5 bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5">
+                    <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2.5">
+                      Campos Estruturais de Cada Solução:
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 text-[11px] text-gray-300">
+                      {[
+                        'Nome',
+                        'Público',
+                        'Dor',
+                        'Promessa',
+                        'Transformação',
+                        'Mecanismo',
+                        'Método',
+                        'Formato',
+                        'Duração',
+                        'Escopo',
+                        'Entregáveis',
+                        'Experiência',
+                        'Diferenciais',
+                        'Preço',
+                        'Ancoragem',
+                        'Posicionamento',
+                      ].map((field, i) => (
+                        <span
+                          key={i}
+                          className="px-2 py-1 bg-[#1B2640] rounded-md border border-white/10 text-white font-medium"
+                        >
+                          {field}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Matriz Valor x Esforço x Escala */}
+                  <div className="mb-6 bg-[#1B2640] p-4 rounded-xl border border-white/5 text-xs text-gray-200">
+                    <span className="text-xs uppercase font-bold text-accent tracking-wider block mb-1">
+                      Matriz Valor × Esforço × Escala:
+                    </span>
+                    <p className="text-gray-300 leading-relaxed">
+                      Cada solução é rigorosamente analisada considerando{' '}
+                      <strong>
+                        valor percebido, esforço de entrega, margem, dependência do fundador,
+                        potencial de recorrência, potencial de escala e importância estratégica
+                      </strong>
+                      .
+                    </p>
+                  </div>
 
                   <div className="grid md:grid-cols-2 gap-4 pt-4 border-t border-white/10">
                     <div className="bg-[#1B2640] p-4 rounded-xl border border-white/5">
@@ -821,10 +1055,11 @@ export default function Index() {
                     </div>
                     <div className="bg-[#1B2640] p-4 rounded-xl border border-white/5 flex flex-col justify-center">
                       <p className="text-xs uppercase font-bold text-accent tracking-wider mb-1">
-                        Entrega da Etapa:
+                        Entregas da Etapa:
                       </p>
                       <p className="text-sm md:text-base font-bold text-accent">
-                        Estrutura Estratégica das Ofertas
+                        Ficha Estratégica das Ofertas + Matriz de Portfólio + Arquitetura de
+                        Precificação
                       </p>
                     </div>
                   </div>
@@ -850,21 +1085,63 @@ export default function Index() {
                       5º D — DECOLAGEM
                     </span>
                     <span className="text-base font-semibold text-gray-300">
-                      "Coloque sua esteira em movimento"
+                      "Colocar a Esteira de Valor em movimento"
                     </span>
                   </div>
 
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                    Estratégia de entrada no mercado, comunicação e vendas contínuas
+                    A Esteira não termina quando os produtos ficam prontos: conexão com mercado e
+                    vendas
                   </h3>
 
-                  <p className="text-gray-300 text-base leading-relaxed mb-6">
-                    Define a comunicação das ofertas, mensagem principal, pitch, argumentos
-                    comerciais, canais de aquisição, CTAs, jornada de compra e estratégia de venda.
-                    Estabelece a passagem de uma oferta para outra, upsell, cross-sell, continuidade
-                    e recompra, além de plano de lançamento/ativação, prioridades, cronograma
-                    inicial e indicadores.
+                  <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-5">
+                    A Decolagem conecta estratégia, oferta, comunicação e vendas contínuas: mensagem
+                    comercial e apresentação; pitch e argumentos de valor; canais e CTAs; estratégia
+                    de entrada e base atual de clientes; jornada de compra, upsell, cross-sell,
+                    continuidade e ativação.
                   </p>
+
+                  {/* Perguntas da Jornada Comercial */}
+                  <div className="mb-5 bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5">
+                    <p className="text-xs font-bold text-accent uppercase tracking-wider mb-2">
+                      Perguntas Fundamentais da Jornada Comercial:
+                    </p>
+                    <div className="grid sm:grid-cols-2 gap-2 text-xs text-gray-300">
+                      <span>• Como o cliente descobre a marca?</span>
+                      <span>• Qual é o primeiro movimento esperado?</span>
+                      <span>• Qual solução ele compra primeiro?</span>
+                      <span>• Como identificamos a necessidade seguinte?</span>
+                      <span>• Qual é a próxima oferta?</span>
+                      <span>• Quando apresentar a oferta premium?</span>
+                      <span className="sm:col-span-2">
+                        • Como gerar continuidade dentro do ecossistema?
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Plano de Decolagem 30-60-90 */}
+                  <div className="mb-6 bg-[#1B2640] p-4 rounded-xl border border-white/5">
+                    <span className="text-xs uppercase font-bold text-accent tracking-wider block mb-2.5">
+                      Plano de Decolagem 30-60-90:
+                    </span>
+                    <div className="space-y-2 text-xs text-gray-200">
+                      <div>
+                        <strong className="text-accent">30 dias — Organizar e ativar:</strong>{' '}
+                        Finalizar materiais, organizar comunicação, preparar canais, apresentar a
+                        nova estrutura à base existente e iniciar ativação.
+                      </div>
+                      <div>
+                        <strong className="text-accent">60 dias — Vender e validar:</strong>{' '}
+                        Realizar ofertas, observar comportamento, identificar objeções, validar
+                        comunicação e acompanhar conversão.
+                      </div>
+                      <div>
+                        <strong className="text-accent">90 dias — Medir e otimizar:</strong>{' '}
+                        Analisar resultados, rever ofertas, ajustar preços, aprimorar a jornada,
+                        identificar gargalos e priorizar melhorias.
+                      </div>
+                    </div>
+                  </div>
 
                   <div className="grid md:grid-cols-2 gap-4 pt-4 border-t border-white/10">
                     <div className="bg-[#1B2640] p-4 rounded-xl border border-white/5">
@@ -881,7 +1158,7 @@ export default function Index() {
                         Entregas da Etapa:
                       </p>
                       <p className="text-sm md:text-base font-bold text-accent">
-                        Plano de Decolagem da Esteira e Roadmap de Implementação
+                        Plano de Decolagem + Roadmap 30-60-90
                       </p>
                     </div>
                   </div>
@@ -892,88 +1169,556 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 10. PRINCIPAIS ENTREGÁVEIS DO PROGRAMA */}
+      {/* SEÇÃO NOVA A & B: DINÂMICA DE IMPLEMENTAÇÃO & FORMATO DO PROGRAMA */}
+      <section id="dinamica" className="py-24 md:py-32 bg-gray-50 border-b border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <ScrollReveal>
+              <div className="text-center max-w-3xl mx-auto mb-16">
+                <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">
+                  Construção Guiada Passo a Passo
+                </span>
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+                  A Dinâmica de <span className="text-accent">Implementação</span>
+                </h2>
+                <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                  O Esteira de Valor 5D{' '}
+                  <strong className="text-primary font-semibold">
+                    não será conduzido como uma sequência de aulas
+                  </strong>
+                  . A metodologia funciona em ciclos contínuos de execução:
+                </p>
+              </div>
+            </ScrollReveal>
+
+            {/* Ciclo Oficial */}
+            <ScrollReveal delay={100} className="mb-14">
+              <div className="bg-primary text-white p-6 sm:p-8 rounded-3xl shadow-xl border border-accent/30 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div className="text-center mb-6">
+                  <span className="text-xs uppercase font-bold text-accent tracking-widest block mb-2">
+                    O Ciclo de Ação Contínua
+                  </span>
+                  <div className="flex flex-wrap items-center justify-center gap-2 text-xs sm:text-sm md:text-base font-extrabold font-mono text-white">
+                    <span className="px-3 py-1.5 bg-white/10 rounded-lg">APRENDER</span>
+                    <span className="text-accent">→</span>
+                    <span className="px-3 py-1.5 bg-white/10 rounded-lg">DECIDIR</span>
+                    <span className="text-accent">→</span>
+                    <span className="px-3 py-1.5 bg-white/10 rounded-lg">CONSTRUIR</span>
+                    <span className="text-accent">→</span>
+                    <span className="px-3 py-1.5 bg-white/10 rounded-lg">IMPLEMENTAR</span>
+                    <span className="text-accent">→</span>
+                    <span className="px-3 py-1.5 bg-white/10 rounded-lg">VALIDAR</span>
+                    <span className="text-accent">→</span>
+                    <span className="px-3 py-1.5 bg-white/10 rounded-lg">AJUSTAR</span>
+                    <span className="text-accent">→</span>
+                    <span className="px-3 py-1.5 bg-accent text-primary rounded-lg">AVANÇAR</span>
+                  </div>
+                </div>
+                <div className="text-center pt-4 border-t border-white/10 max-w-2xl mx-auto">
+                  <p className="text-xs sm:text-sm text-gray-300 italic">
+                    Fluxo oficial do programa:{' '}
+                    <strong className="text-accent font-semibold">
+                      "Aprender no encontro → construir durante o Sprint → revisar no Lab → chegar
+                      preparado ao próximo D."
+                    </strong>
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* As 5 Fases de Cada Ciclo */}
+            <div className="mb-16">
+              <h3 className="text-xl md:text-2xl font-bold text-primary text-center mb-8">
+                Como Funciona Cada Ciclo
+              </h3>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                {[
+                  {
+                    num: '1',
+                    title: 'Encontro Estratégico',
+                    desc: 'Conteúdo, análise, direcionamento e tomada de decisão estratégica.',
+                  },
+                  {
+                    num: '2',
+                    title: 'Sprint de Implementação',
+                    desc: 'O participante aplica o que foi construído diretamente ao próprio negócio.',
+                  },
+                  {
+                    num: '3',
+                    title: '5D Lab',
+                    desc: 'Oficina ao vivo de revisão, tira-dúvidas, construção orientada e desbloqueio.',
+                  },
+                  {
+                    num: '4',
+                    title: 'Ajustes Finos',
+                    desc: 'O participante finaliza e lapida o ativo estratégico daquela etapa.',
+                  },
+                  {
+                    num: '5',
+                    title: 'Próximo Encontro',
+                    desc: 'Avançamos com consistência para a próxima grande decisão da esteira.',
+                  },
+                ].map((item, idx) => (
+                  <ScrollReveal
+                    key={idx}
+                    delay={idx * 80}
+                    className="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-xs flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="w-8 h-8 rounded-lg bg-accent/20 text-accent font-black text-sm flex items-center justify-center mb-3">
+                        {item.num}
+                      </div>
+                      <h4 className="font-bold text-primary text-sm mb-1.5">{item.title}</h4>
+                      <p className="text-xs text-gray-600 leading-relaxed">{item.desc}</p>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </div>
+
+            {/* Formato Oficial do Programa: 16 Pontos de Contato ao Vivo */}
+            <ScrollReveal className="mb-16">
+              <div className="bg-white border-2 border-accent/40 rounded-3xl p-8 md:p-10 shadow-lg">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+                  <div className="space-y-4 max-w-2xl">
+                    <span className="text-xs font-bold uppercase tracking-widest text-accent bg-accent/10 px-3 py-1 rounded-full border border-accent/20">
+                      Formato Oficial do Programa
+                    </span>
+                    <h3 className="text-2xl sm:text-3xl font-extrabold text-primary">
+                      16 Pontos de Contato ao Vivo ao longo de 4 Meses
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                      Uma estrutura desenhada para garantir que você não pare no meio do caminho e
+                      construa ativos comerciais definitivos com acompanhamento próximo.
+                    </p>
+
+                    <div className="grid sm:grid-cols-3 gap-4 pt-2">
+                      <div className="bg-gray-50 border border-gray-200 p-4 rounded-xl text-center">
+                        <span className="text-2xl font-black text-primary block">8</span>
+                        <span className="text-xs font-bold text-gray-700 block">
+                          Encontros Estratégicos
+                        </span>
+                        <span className="text-[11px] text-gray-500">Quinzenais ao vivo</span>
+                      </div>
+                      <div className="bg-gray-50 border border-gray-200 p-4 rounded-xl text-center">
+                        <span className="text-2xl font-black text-accent block">7</span>
+                        <span className="text-xs font-bold text-gray-700 block">
+                          Oficinas 5D Lab
+                        </span>
+                        <span className="text-[11px] text-gray-500">
+                          Mão na massa e tira-dúvidas
+                        </span>
+                      </div>
+                      <div className="bg-gray-50 border border-gray-200 p-4 rounded-xl text-center">
+                        <span className="text-2xl font-black text-primary block">1</span>
+                        <span className="text-xs font-bold text-gray-700 block">
+                          Banca Final 5D
+                        </span>
+                        <span className="text-[11px] text-gray-500">Apresentação e validação</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="w-full lg:w-72 bg-primary text-white p-6 rounded-2xl text-center shrink-0 border border-accent/30 shadow-md">
+                    <p className="text-[11px] uppercase tracking-wider font-bold text-accent mb-1">
+                      Carga Total
+                    </p>
+                    <p className="text-xl sm:text-2xl font-black text-white leading-tight mb-2">
+                      16 Pontos de Contato ao Vivo
+                    </p>
+                    <p className="text-xs text-gray-300 leading-relaxed">
+                      Duração aproximada de <strong>4 meses</strong> de mentoria e implementação
+                      ativa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* O Que É o 5D Lab — Oficina de Implementação */}
+            <ScrollReveal className="mb-16">
+              <div className="bg-[#141D30] text-white rounded-3xl p-8 md:p-10 border border-white/10 shadow-xl">
+                <div className="max-w-3xl mb-6">
+                  <span className="text-xs font-bold uppercase tracking-widest text-accent block mb-2">
+                    5D Lab — Onde o Trabalho Acontece
+                  </span>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                    Não é uma aula adicional. É um espaço de construção orientada.
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+                    A oficina intermediária de aplicação do método serve para colocar materiais na
+                    tela, destrinchar dúvidas e sair com a oferta pronta:
+                  </p>
+                </div>
+
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+                  {[
+                    'Apresentar materiais e rascunhos',
+                    'Esclarecer dúvidas pontuais da entrega',
+                    'Revisar decisões tomadas nos encontros',
+                    'Receber direcionamento direto da mentora',
+                    'Ajustar produtos e escopos de serviço',
+                    'Validar propostas e tickets de venda',
+                    'Comparar alternativas de entrega',
+                    'Resolver bloqueios e indecisões',
+                    'Aprimorar entregáveis finais da etapa',
+                  ].map((labItem, i) => (
+                    <div
+                      key={i}
+                      className="bg-white/5 border border-white/10 p-3 rounded-xl flex items-center gap-2.5 text-xs text-gray-200"
+                    >
+                      <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
+                      <span>{labItem}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            {/* SEÇÃO C & D: BANCA FINAL & DOSSIÊ */}
+            <div className="grid md:grid-cols-2 gap-8 items-stretch">
+              {/* Banca Final */}
+              <ScrollReveal className="bg-white border-2 border-gray-200 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:border-accent transition-all">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 text-primary text-xs font-bold uppercase tracking-wider mb-4">
+                    <Target className="w-3.5 h-3.5 text-accent" />
+                    Encerramento com Chave de Ouro
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-3">
+                    Banca Final — Esteira de Valor 5D
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+                    A jornada é encerrada com uma apresentação estruturada. Cada participante
+                    apresenta sua Esteira de Valor completa:
+                  </p>
+
+                  <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 mb-5 text-xs text-gray-700 space-y-1.5">
+                    <p>
+                      • <strong>Posicionamento:</strong> quem atende e qual transformação lidera.
+                    </p>
+                    <p>
+                      • <strong>Proposta de Valor:</strong> por que o mercado deveria escolher
+                      aquela solução.
+                    </p>
+                    <p>
+                      • <strong>Esteira:</strong> como os produtos se conectam de ponta a ponta.
+                    </p>
+                    <p>
+                      • <strong>Oferta de Entrada:</strong> como o cliente inicia a jornada.
+                    </p>
+                    <p>
+                      • <strong>Solução Principal:</strong> onde acontece a transformação central.
+                    </p>
+                    <p>
+                      • <strong>Recorrência:</strong> como gerar continuidade e LTV.
+                    </p>
+                    <p>
+                      • <strong>Premium:</strong> qual é a oferta de maior profundidade.
+                    </p>
+                    <p>
+                      • <strong>Decolagem:</strong> como a esteira será colocada no mercado.
+                    </p>
+                  </div>
+
+                  <p className="text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">
+                    Critérios avaliados pela Banca:
+                  </p>
+                  <p className="text-xs text-gray-500 mb-4 leading-relaxed">
+                    Clareza, coerência, conexão entre ofertas, aderência ao cliente, proposta de
+                    valor, capacidade de execução, lógica de monetização, sustentabilidade,
+                    posicionamento e potencial de continuidade.
+                  </p>
+                </div>
+
+                <div className="mt-4 pt-4 border-t border-gray-200 bg-primary/5 p-3.5 rounded-xl text-center">
+                  <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-1">
+                    Direcionamentos Finais da Banca
+                  </span>
+                  <p className="text-xs sm:text-sm font-extrabold text-primary tracking-wide">
+                    MANTER • AJUSTAR • SIMPLIFICAR • PRIORIZAR
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              {/* Dossiê Esteira de Valor 5D */}
+              <ScrollReveal className="bg-white border-2 border-accent/40 rounded-3xl p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-all">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent text-primary text-xs font-bold uppercase tracking-wider mb-4">
+                    <FileCheck2 className="w-3.5 h-3.5" />
+                    O Ativo Mais Valioso do Programa
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary mb-3">
+                    Dossiê Esteira de Valor 5D
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+                    Todos os principais entregáveis formam, ao final, o{' '}
+                    <strong>Dossiê Esteira de Valor 5D</strong>.
+                  </p>
+
+                  <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 mb-5 text-xs text-gray-700 leading-relaxed space-y-2.5">
+                    <p>
+                      Esse documento reúne <strong>toda a nova arquitetura comercial</strong> do
+                      participante e funciona como mapa estratégico permanente para decisões futuras
+                      sobre:
+                    </p>
+                    <div className="grid grid-cols-2 gap-1.5 font-medium text-primary">
+                      <span>✓ Criação de produtos</span>
+                      <span>✓ Vendas & Metas</span>
+                      <span>✓ Comunicação & Pitch</span>
+                      <span>✓ Investimentos</span>
+                      <span>✓ Prioridades do negócio</span>
+                      <span>✓ Posicionamento & Expansão</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-accent/20 to-accent/5 p-4 rounded-xl border-l-4 border-accent">
+                    <p className="text-xs sm:text-sm font-bold text-primary leading-snug">
+                      "O participante não termina apenas com conhecimento. Termina com ativos
+                      estratégicos construídos para o próprio negócio."
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-500 italic">
+                  Seu mapa de navegação empresarial para os próximos anos de faturamento.
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. OS 14 ENTREGÁVEIS OFICIAIS DO PROGRAMA */}
       <section id="entregaveis" className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-4">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">
-                O que você leva
+                O que você leva em mãos
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
-                Principais <span className="text-accent">Entregáveis</span> do Programa
+                Os <span className="text-accent">14 Entregáveis Oficiais</span> da Jornada
               </h2>
-              <p className="text-lg text-gray-600">
-                Tudo o que é desenhado, construído e validado com você durante a formação da sua
-                esteira:
+              <p className="text-base sm:text-lg text-gray-600">
+                Cada etapa gera ativos práticos e definitivos que compõem o seu{' '}
+                <strong>Dossiê Esteira de Valor 5D</strong>:
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-7xl mx-auto">
             {[
               {
+                num: '01',
+                title: 'Raio-X do Negócio',
+                desc: 'Diagnóstico inicial detalhado do momento atual, produtos, receita, gargalos operacionais e visão de futuro.',
+              },
+              {
+                num: '02',
                 title: 'Mapa de Ativos de Valor',
-                desc: 'Inventário completo dos seus conhecimentos, métodos, competências e oportunidades monetizáveis.',
+                desc: 'Inventário completo dos seus conhecimentos, métodos, competências, formações e oportunidades monetizáveis.',
               },
               {
-                title: 'Definição do Público Estratégico',
-                desc: 'Filtro qualificado de clientes prioritários com perfil para comprar suas ofertas de maior margem.',
+                num: '03',
+                title: 'Mapa do Cliente Estratégico',
+                desc: 'Perfil aprofundado do público prioritário, dores, desejos, necessidades e transformação desejada.',
               },
               {
+                num: '04',
+                title: 'Posicionamento',
+                desc: 'Território estratégico e diferencial autêntico da sua marca para escapar da guerra por preço.',
+              },
+              {
+                num: '05',
                 title: 'Proposta Central de Valor',
-                desc: 'Posicionamento claro, autêntico e diferenciado frente à concorrência genérica.',
+                desc: 'Fórmula PÚBLICO + PROBLEMA + TRANSFORMAÇÃO + DIFERENCIAL consolidada para o mercado.',
               },
               {
+                num: '06',
                 title: 'Mapa da Esteira de Valor',
-                desc: 'Arquitetura visual com a conexão exata entre todas as ofertas do negócio.',
+                desc: 'Arquitetura com as 6 camadas conectadas (Atração, Entrada, Solução Principal, Recorrência, Premium, Continuidade).',
               },
               {
-                title: 'Estrutura dos Produtos',
-                desc: 'Promessa, método, formato, duração, escopo e entregáveis fechados para cada solução.',
+                num: '07',
+                title: 'Ficha das Ofertas Prioritárias',
+                desc: 'Estruturação dos 16 campos comerciais de cada oferta (nome, método, escopo, promessa, entrega etc.).',
               },
               {
-                title: 'Estratégia de Precificação',
-                desc: 'Precificação por valor entregue, ancoragem inteligente e formatação de pacotes atrativos.',
+                num: '08',
+                title: 'Matriz Valor × Esforço × Escala',
+                desc: 'Análise de viabilidade: margem, dependência do fundador, potencial de escala e importância estratégica.',
               },
               {
+                num: '09',
+                title: 'Arquitetura de Precificação',
+                desc: 'Precificação estratégica por valor gerado, ancoragem, pacotes e relação entre tickets da esteira.',
+              },
+              {
+                num: '10',
                 title: 'Jornada do Cliente',
-                desc: 'Caminho planejado de evolução para que cada compra estimule a continuidade na próxima.',
+                desc: 'Mapeamento do caminho de avanço do comprador de uma solução para a seguinte.',
               },
               {
+                num: '11',
                 title: 'Pitch das Ofertas',
-                desc: 'Comunicação comercial afiada com scripts e mensagens de impacto para converter com autoridade.',
+                desc: 'Comunicação comercial afiada com scripts, argumentos de valor e apresentação assertiva de cada solução.',
               },
               {
+                num: '12',
                 title: 'Estratégia de Upsell e Cross-sell',
-                desc: 'Processos comerciais para oferecer o próximo nível no momento ideal da entrega.',
+                desc: 'Processo comercial e momento exato de apresentar a próxima solução ou a oferta premium.',
               },
               {
+                num: '13',
                 title: 'Plano de Decolagem',
-                desc: 'Plano de ativação comercial imediata para colocar a nova esteira no ar com segurança.',
+                desc: 'Estratégia de ativação imediata, canais de venda, CTAs e apresentação à base existente.',
               },
               {
-                title: 'Roadmap de Implementação',
-                desc: 'Cronograma com prioridades, etapas e indicadores para guiar a operação passo a passo.',
+                num: '14',
+                title: 'Roadmap 30-60-90',
+                desc: 'Cronograma tático de 30 dias (organizar e ativar), 60 dias (vender e validar) e 90 dias (medir e otimizar).',
               },
-            ].map((deliverable, idx) => (
+            ].map((deliv, idx) => (
               <ScrollReveal
                 key={idx}
-                delay={(idx % 3) * 80}
-                className="bg-gray-50 border border-gray-200/70 p-6 rounded-2xl hover:border-accent hover:bg-white hover:shadow-lg transition-all duration-300"
+                delay={(idx % 4) * 60}
+                className="bg-gray-50 border border-gray-200/80 p-5 rounded-2xl hover:border-accent hover:bg-white hover:shadow-md transition-all duration-300 flex flex-col justify-between"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-accent/15 text-accent flex items-center justify-center shrink-0 mt-0.5">
-                    <FileCheck2 className="w-5 h-5" />
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-black text-accent bg-accent/15 px-2.5 py-1 rounded-lg">
+                      {deliv.num}
+                    </span>
+                    <FileCheck2 className="w-4 h-4 text-accent/60" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-primary text-base mb-2">{deliverable.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{deliverable.desc}</p>
-                  </div>
+                  <h3 className="font-bold text-primary text-sm sm:text-base mb-2">
+                    {deliv.title}
+                  </h3>
+                  <p className="text-gray-600 text-xs leading-relaxed">{deliv.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
           </div>
+
+          <div className="mt-12 text-center max-w-2xl mx-auto">
+            <p className="text-xs sm:text-sm text-gray-500 italic">
+              Todos os 14 entregáveis são compilados no final no{' '}
+              <strong>Dossiê Esteira de Valor 5D</strong> do seu negócio.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SEÇÃO NOVA E: OS 6 PRINCÍPIOS DO ESTEIRA DE VALOR 5D */}
+      <section id="principios" className="py-24 md:py-32 bg-[#0B1120] text-white relative">
+        <div className="container mx-auto px-4">
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">
+                Fundamentos Sólidos
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                Os 6 Princípios do <span className="text-accent">Esteira de Valor 5D</span>
+              </h2>
+              <p className="text-gray-300 text-base max-w-2xl mx-auto">
+                Critérios inegociáveis que garantem que sua esteira seja lucrativa, sustentável e
+                centrada no cliente:
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                num: '1',
+                title: 'Todo produto precisa ter uma função',
+                desc: 'Se não sabemos qual papel a oferta exerce dentro da jornada, ela provavelmente precisa ser revista ou eliminada.',
+              },
+              {
+                num: '2',
+                title: 'O cliente é o centro da esteira',
+                desc: 'A arquitetura é construída a partir das transformações reais que o cliente precisa viver, e não do que queremos desovar.',
+              },
+              {
+                num: '3',
+                title: 'Mais produtos não significam mais valor',
+                desc: 'Uma esteira enxuta, clara e coerente é infinitamente mais eficiente do que um portfólio extenso, disperso e confuso.',
+              },
+              {
+                num: '4',
+                title: 'O próximo produto nasce da próxima necessidade',
+                desc: 'O cliente avança porque surge uma nova necessidade natural na jornada, não porque precisamos vender novamente para ele.',
+              },
+              {
+                num: '5',
+                title: 'Valor e viabilidade precisam caminhar juntos',
+                desc: 'A solução deve gerar resultado incontestável para o cliente e, ao mesmo tempo, ser altamente rentável e sustentável para quem entrega.',
+              },
+              {
+                num: '6',
+                title: 'Implementação faz parte do método',
+                desc: 'Conhecimento sem execução não completa o ciclo do 5D. Você só avança quando o ativo da etapa estiver construído e validado.',
+              },
+            ].map((princ, idx) => (
+              <ScrollReveal
+                key={idx}
+                delay={idx * 80}
+                className="bg-[#141D30] border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-accent/50 transition-all shadow-md group"
+              >
+                <div>
+                  <div className="w-9 h-9 rounded-xl bg-accent text-primary flex items-center justify-center font-black text-sm mb-4 shadow-sm group-hover:scale-105 transition-transform">
+                    {princ.num}
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-white mb-2 group-hover:text-accent transition-colors">
+                    {princ.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed font-light">
+                    {princ.desc}
+                  </p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          {/* O que a metodologia não faz — Bloco Oficial de Integridade */}
+          <ScrollReveal delay={200} className="mt-14 max-w-4xl mx-auto">
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-sm">
+              <span className="text-xs uppercase font-bold text-accent tracking-widest block mb-3 text-center sm:text-left">
+                Compromisso com o Negócio Real • O Que a Metodologia Não Faz
+              </span>
+              <div className="grid sm:grid-cols-2 gap-2 text-xs text-gray-300 mb-6">
+                <span className="flex items-center gap-2">
+                  • Não cria dezenas de produtos desnecessários
+                </span>
+                <span className="flex items-center gap-2">
+                  • Não ensina fórmulas genéricas de infoprodutos
+                </span>
+                <span className="flex items-center gap-2">
+                  • Não faz simplesmente rebatizar serviços velhos
+                </span>
+                <span className="flex items-center gap-2">
+                  • Não monta um catálogo maior e confuso
+                </span>
+                <span className="flex items-center gap-2">
+                  • Não entrega uma receita igual para todos
+                </span>
+                <span className="flex items-center gap-2">
+                  • Não transforma todo conhecimento em produto
+                </span>
+                <span className="flex items-center gap-2 sm:col-span-2">
+                  • Não incentiva ofertas sem demanda ou função estratégica
+                </span>
+              </div>
+              <div className="pt-4 border-t border-white/10 text-center">
+                <p className="text-xs sm:text-sm md:text-base font-semibold text-accent leading-relaxed">
+                  "Menos dispersão. Mais clareza. Menos produtos aleatórios. Mais arquitetura. Menos
+                  venda isolada. Mais jornada. Menos dependência de oportunidade. Mais
+                  intencionalidade comercial."
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -1314,47 +2059,83 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 17. POSICIONAMENTO FINAL */}
+      {/* 17. POSICIONAMENTO FINAL & ASSINATURA OFICIAL DO PRODUTO */}
       <section className="py-20 md:py-28 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 mb-6 text-sm font-bold text-primary">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 mb-6 text-xs sm:text-sm font-bold text-primary">
                 <Sparkles size={16} className="text-accent" />
-                <span>Posicionamento Oficial</span>
+                <span>EDVANCED CONSULTORIA & DESENVOLVIMENTO</span>
               </div>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-6">
+              <h2 className="text-3xl md:text-5xl font-extrabold text-primary mb-4">
                 ESTEIRA DE VALOR 5D
               </h2>
-              <p className="text-xl md:text-2xl text-gray-700 font-semibold mb-8 leading-snug">
-                "Uma metodologia para transformar expertise em uma arquitetura estratégica de
-                produtos e serviços."
+              <p className="text-lg md:text-xl text-gray-700 font-semibold mb-6 leading-snug">
+                "Programa de Construção e Implementação de Produtos e Serviços. Da expertise à
+                construção de uma jornada estratégica de valor."
               </p>
+
+              {/* Assinatura Oficial Completa do Produto */}
+              <div className="bg-primary text-white p-6 sm:p-8 rounded-3xl border-2 border-accent/40 shadow-xl my-8">
+                <span className="text-xs uppercase font-bold text-accent tracking-widest block mb-2">
+                  Assinatura Oficial do Produto
+                </span>
+                <p className="text-lg sm:text-2xl font-black text-white mb-4 leading-tight">
+                  ESTEIRA DE VALOR 5D — Do serviço solto à jornada estratégica de valor.
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-200 font-semibold">
+                  <span className="px-3 py-1.5 rounded-lg bg-white/10 border border-white/10">
+                    8 encontros estratégicos
+                  </span>
+                  <span className="text-accent">•</span>
+                  <span className="px-3 py-1.5 rounded-lg bg-white/10 border border-white/10">
+                    7 oficinas de implementação
+                  </span>
+                  <span className="text-accent">•</span>
+                  <span className="px-3 py-1.5 rounded-lg bg-white/10 border border-white/10">
+                    5 decisões fundamentais
+                  </span>
+                  <span className="text-accent">•</span>
+                  <span className="px-3 py-1.5 rounded-lg bg-accent text-primary font-bold">
+                    1 Esteira de Valor construída
+                  </span>
+                </div>
+              </div>
+
+              {/* Promessa Metodológica */}
+              <div className="p-5 bg-gray-50 rounded-2xl border border-gray-200 text-xs sm:text-sm text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                <strong className="text-primary block mb-1">Promessa Metodológica:</strong>
+                "Em aproximadamente quatro meses, através do Método 5D, de encontros estratégicos e
+                oficinas de implementação, o participante constrói a arquitetura da sua Esteira de
+                Valor, estrutura suas ofertas prioritárias e define um plano claro para colocá-las
+                no mercado."
+              </div>
 
               <div className="grid md:grid-cols-3 gap-6 text-left my-10">
                 <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                   <span className="text-xs uppercase font-bold text-accent tracking-widest block mb-2">
-                    Método
+                    5 Decisões Estratégicas
                   </span>
-                  <p className="font-bold text-primary text-base">
-                    Diagnóstico → Direcionamento → Desenho → Desenvolvimento → Decolagem
+                  <p className="font-bold text-primary text-sm sm:text-base">
+                    1. Diagnóstico → 2. Direcionamento → 3. Desenho → 4. Desenvolvimento → 5.
+                    Decolagem
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                   <span className="text-xs uppercase font-bold text-accent tracking-widest block mb-2">
-                    Transformação
+                    Transformação Real
                   </span>
-                  <p className="font-bold text-primary text-base">
-                    "Do serviço isolado para uma jornada estratégica de valor."
+                  <p className="font-bold text-primary text-sm sm:text-base">
+                    "Do serviço solto para uma jornada estratégica de soluções de alto valor."
                   </p>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200">
                   <span className="text-xs uppercase font-bold text-accent tracking-widest block mb-2">
-                    Resultado
+                    Resultado Concreto
                   </span>
-                  <p className="font-bold text-primary text-base">
-                    "Uma esteira de ofertas estruturada, conectada e pronta para entrar em
-                    operação."
+                  <p className="font-bold text-primary text-sm sm:text-base">
+                    "Dossiê Esteira de Valor 5D completo com 14 entregáveis prontos para execução."
                   </p>
                 </div>
               </div>
@@ -1403,16 +2184,21 @@ export default function Index() {
               <div className="w-16 h-16 rounded-full bg-accent/15 text-accent flex items-center justify-center mx-auto mb-6">
                 <Lightbulb className="w-8 h-8" />
               </div>
-              <h2 className="text-2xl md:text-4xl font-bold mb-6">A Essência da Marca</h2>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 font-light">
-                Cada produto ocupa uma função estratégica: a primeira solução abre a porta; a
-                próxima aprofunda a transformação; outra gera continuidade; a premium potencializa
-                resultado e proximidade; todas dentro de uma mesma arquitetura.
+              <h2 className="text-2xl md:text-4xl font-bold mb-6">A Essência da Metodologia</h2>
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-6 font-light max-w-3xl mx-auto">
+                O Esteira de Valor 5D não ensina o empreendedor apenas a criar produtos. Ensina a
+                olhar para o próprio negócio como uma jornada. Porque uma oferta pode resolver o
+                problema atual. Mas uma esteira bem construída consegue acompanhar a evolução
+                continuada do cliente.
               </p>
-              <blockquote className="text-xl md:text-3xl font-extrabold text-accent italic max-w-3xl mx-auto leading-snug">
-                "Porque um negócio de valor não é construído apenas pelo que vende. É construído
-                pela jornada que consegue proporcionar ao cliente."
+              <blockquote className="text-lg sm:text-2xl md:text-3xl font-extrabold text-accent italic max-w-3xl mx-auto leading-snug bg-white/5 border border-white/10 p-6 rounded-2xl mb-4">
+                "Não construa apenas produtos. Construa o caminho que o seu cliente percorre dentro
+                do seu negócio."
               </blockquote>
+              <p className="text-xs text-gray-400">
+                EDVANCED | Esteira de Valor 5D • Da expertise à construção de uma jornada
+                estratégica de valor.
+              </p>
             </ScrollReveal>
           </div>
         </div>
