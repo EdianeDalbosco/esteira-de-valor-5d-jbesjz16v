@@ -2082,7 +2082,7 @@ export default function Index() {
                   Assinatura Oficial do Produto
                 </span>
                 <p className="text-lg sm:text-2xl font-black text-white mb-4 leading-tight">
-                  ESTEIRA DE VALOR 5D — Do serviço solto à jornada estratégica de valor.
+                  ESTEIRA DE VALOR 5D<div>Do serviço solto à jornada estratégica de valor.</div>
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-200 font-semibold">
                   <span className="px-3 py-1.5 rounded-lg bg-white/10 border border-white/10">
