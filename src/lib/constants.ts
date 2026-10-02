@@ -40,13 +40,14 @@ export const WHATSAPP_MESSAGES = {
  * Sempre inclui parâmetro ?text= para compatibilidade estrita com WhatsApp Desktop,
  * WhatsApp Web e navegadores mobile/desktop.
  */
-export function WHATSAPP_LINK(
-  message: string = WHATSAPP_MESSAGES.garantirVaga,
-  phone: string = WHATSAPP_NUMBER,
-): string {
-  const cleanPhone = phone.replace(/\D/g, '')
+export function WHATSAPP_LINK(message?: string | null, phone: string = WHATSAPP_NUMBER): string {
+  const cleanPhone =
+    (phone && phone.trim().length > 0 ? phone : WHATSAPP_NUMBER).replace(/\D/g, '') ||
+    WHATSAPP_NUMBER
   const safeMessage =
-    message && message.trim().length > 0 ? message.trim() : WHATSAPP_MESSAGES.garantirVaga
+    typeof message === 'string' && message.trim().length > 0
+      ? message.trim()
+      : WHATSAPP_MESSAGES.garantirVaga
   return `https://wa.me/${cleanPhone}?text=${encodeURIComponent(safeMessage)}`
 }
 

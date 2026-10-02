@@ -13,9 +13,6 @@ import {
   WHATSAPP_MESSAGES,
 } from '@/lib/constants'
 
-// URL para retrocompatibilidade caso algum componente externo acesse WHATSAPP_URL
-export const WHATSAPP_URL = WHATSAPP_LINK(WHATSAPP_MESSAGES.garantirVaga)
-
 export default function Layout() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)

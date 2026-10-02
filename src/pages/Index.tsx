@@ -31,8 +31,6 @@ import heroPhoto from '@/assets/img7990-74f78.jpg'
 
 import { WHATSAPP_LINK, WHATSAPP_MESSAGES } from '@/lib/constants'
 
-export const WHATSAPP_URL = WHATSAPP_LINK(WHATSAPP_MESSAGES.garantirVaga)
-
 const SITE_TITLE =
   'EDVANCED | Esteira de Valor 5D — Do serviço solto à jornada estratégica de valor'
 
@@ -2177,7 +2175,7 @@ export default function Index() {
                 </button>
                 <span className="hidden sm:inline text-gray-600">•</span>
                 <a
-                  href={WHATSAPP_URL}
+                  href={WHATSAPP_LINK(WHATSAPP_MESSAGES.garantirVaga)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-accent hover:underline inline-flex items-center gap-1 font-semibold"

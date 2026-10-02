@@ -11,7 +11,7 @@ export {
 
 import { WHATSAPP_LINK, WHATSAPP_MESSAGES } from '@/lib/constants'
 
-// URLs pré-calculadas para retrocompatibilidade
+// URLs pré-calculadas com texto codificado obrigatório via WHATSAPP_LINK
 export const WHATSAPP_URL = WHATSAPP_LINK(WHATSAPP_MESSAGES.garantirVaga)
 export const WHATSAPP_THANKYOU_URL = WHATSAPP_LINK(WHATSAPP_MESSAGES.confirmarHorario)
 export const WHATSAPP_DIRECT_URL = WHATSAPP_LINK(WHATSAPP_MESSAGES.confirmarHorario)

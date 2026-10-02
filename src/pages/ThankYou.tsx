@@ -39,8 +39,6 @@ export const AGENDA_URL = 'https://calendly.com/'
 
 import { WHATSAPP_NUMBER, WHATSAPP_LINK, WHATSAPP_MESSAGES } from '@/lib/constants'
 
-// Exportações mantidas para retrocompatibilidade
-export const WHATSAPP_URL = WHATSAPP_LINK(WHATSAPP_MESSAGES.confirmarHorario)
 export { WHATSAPP_NUMBER as WHATSAPP_PHONE }
 
 // Duração média da chamada estratégica
