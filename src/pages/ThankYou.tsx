@@ -37,8 +37,15 @@ import logoImage from '@/assets/logo-edvanced-17-7aa6b.png'
 // Para alterar, insira o link real (ex.: 'https://calendly.com/sua-empresa/chamada-estrategica')
 export const AGENDA_URL = 'https://calendly.com/'
 
-// Link oficial do WhatsApp para atendimento imediato
-export const WHATSAPP_URL = 'https://wa.me/5565981003969'
+import {
+  WHATSAPP_PHONE,
+  WHATSAPP_THANKYOU_URL,
+  WHATSAPP_URL as BASE_WHATSAPP_URL,
+} from '@/config/whatsapp'
+
+// Link oficial do WhatsApp para atendimento imediato (reexportado para retrocompatibilidade)
+export const WHATSAPP_URL = WHATSAPP_THANKYOU_URL
+export { WHATSAPP_PHONE }
 
 // Duração média da chamada estratégica
 const CALL_DURATION = '45 minutos'
@@ -313,7 +320,7 @@ export default function ThankYou() {
                   </div>
 
                   <a
-                    href={WHATSAPP_URL}
+                    href={WHATSAPP_THANKYOU_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-5 h-12 rounded-xl text-sm font-semibold transition-all"
@@ -551,7 +558,7 @@ export default function ThankYou() {
                   Garantir Horário
                 </a>
                 <a
-                  href={WHATSAPP_URL}
+                  href={WHATSAPP_THANKYOU_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 text-white hover:bg-white/20 px-5 h-12 rounded-xl text-sm font-semibold transition-all border border-white/20 text-center"

@@ -29,7 +29,8 @@ import {
 import mentorImage from '@/assets/as-portas-estao-1-21a63.png'
 import heroPhoto from '@/assets/img7990-74f78.jpg'
 
-const WHATSAPP_URL = 'https://wa.me/5565981003969'
+import { WHATSAPP_URL } from '@/config/whatsapp'
+
 const SITE_TITLE =
   'EDVANCED | Esteira de Valor 5D — Do serviço solto à jornada estratégica de valor'
 
@@ -2165,12 +2166,23 @@ export default function Index() {
           <ScrollReveal delay={200}>
             <DiagnosticQuiz onComplete={setDiagnosticResult} />
             <div className="text-center mt-8">
-              <button
-                onClick={() => scrollTo('contato')}
-                className="text-sm text-gray-500 hover:text-primary transition-colors font-medium underline underline-offset-4"
-              >
-                Pular diagnóstico e ir direto para o formulário de contato →
-              </button>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                <button
+                  onClick={() => scrollTo('contato')}
+                  className="text-xs text-gray-400 hover:text-white transition-colors underline underline-offset-2"
+                >
+                  Ir para o formulário de contato
+                </button>
+                <span className="hidden sm:inline text-gray-600">•</span>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-accent hover:underline inline-flex items-center gap-1 font-semibold"
+                >
+                  Atendimento direto no WhatsApp →
+                </a>
+              </div>{' '}
             </div>
           </ScrollReveal>
         </div>

@@ -5,9 +5,7 @@ import { cn } from '@/lib/utils'
 import logoImage from '@/assets/logo-edvanced-17-7aa6b.png'
 import { useAuth } from '@/hooks/use-auth'
 
-const WHATSAPP_URL = 'https://wa.me/5565981003969'
-const PHONE_DISPLAY = '(65) 98100 3969'
-const ADDRESS_TEXT = 'Rua Deputado Roberto Cruz, 246, Bairro Alvorada, Cuiabá/MT'
+import { WHATSAPP_URL, WHATSAPP_PHONE, PHONE_DISPLAY, ADDRESS_TEXT } from '@/config/whatsapp'
 
 export default function Layout() {
   const [scrolled, setScrolled] = useState(false)
@@ -265,7 +263,7 @@ export default function Layout() {
           <div className="md:col-span-4 space-y-5">
             <h4 className="font-bold text-gray-200 mb-2">Contato</h4>
             <a
-              href={`tel:+5565981003969`}
+              href={`tel:+${WHATSAPP_PHONE}`}
               className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors"
             >
               <Phone size={18} className="text-accent shrink-0" />
@@ -322,6 +320,25 @@ export default function Layout() {
           </span>
         </div>
       </footer>
+
+      {/* Botão Flutuante Oficial do WhatsApp */}
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar no WhatsApp"
+        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-2xl hover:bg-[#20bd5a] hover:scale-110 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-[#25D366]/40 group"
+      >
+        <MessageCircle
+          size={30}
+          className="fill-white group-hover:scale-105 transition-transform"
+        />
+        <span className="sr-only">Falar no WhatsApp</span>
+        {/* Tooltip no desktop */}
+        <span className="hidden md:block absolute right-16 px-3 py-1.5 rounded-lg bg-gray-900 text-white text-xs font-semibold whitespace-nowrap shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+          Fale conosco no WhatsApp
+        </span>
+      </a>
     </div>
   )
 }
