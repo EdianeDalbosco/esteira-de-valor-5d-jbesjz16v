@@ -16,39 +16,54 @@ interface QuizQuestion {
 
 const QUESTIONS: QuizQuestion[] = [
   {
-    question: 'Qual é o seu momento profissional atual?',
+    question: 'Como você comercializa seus serviços e conhecimento hoje?',
     options: [
-      { text: 'Tenho emprego e busco transição de carreira', score: 1 },
-      { text: 'Sou freelancer ou consultor independente', score: 2 },
-      { text: 'Tenho negócio estabelecido e quero escalar', score: 3 },
-      { text: 'Sou especialista mas ainda não vendi meu conhecimento', score: 1 },
+      { text: 'Vendo serviços pontuais ou cobro por horas/execução', score: 1 },
+      { text: 'Crio produtos e soluções conforme surgem oportunidades', score: 2 },
+      { text: 'Tenho várias ofertas, mas elas não conversam entre si', score: 2 },
+      { text: 'Tenho clientes que compram, mas não sei qual deve ser a próxima oferta', score: 3 },
     ],
   },
   {
-    question: 'Qual é o seu maior desafio hoje?',
+    question: 'Qual é o maior gargalo comercial do seu negócio atualmente?',
     options: [
-      { text: 'Não sei precificar meu conhecimento', score: 1 },
-      { text: 'Vendo horas e não consigo escalar', score: 2 },
-      { text: 'Tenho método mas falta estrutura de vendas', score: 3 },
-      { text: 'Preciso de autoridade e posicionamento', score: 2 },
+      { text: 'Preciso conquistar um novo cliente a cada venda (ciclo do zero)', score: 1 },
+      { text: 'Dificuldade para estruturar método, escopo e entregáveis claros', score: 2 },
+      { text: 'Falta uma oferta premium de maior profundidade e proximidade', score: 3 },
+      {
+        text: 'Entrego muito valor, mas capturo pouco e dependo da minha presença física',
+        score: 2,
+      },
     ],
   },
   {
-    question: 'Qual sua meta de faturamento mensal com seu conhecimento?',
+    question: 'Como está desenhada a jornada do seu cliente hoje?',
     options: [
-      { text: 'R$ 5 mil a R$ 10 mil', score: 1 },
-      { text: 'R$ 10 mil a R$ 30 mil', score: 2 },
-      { text: 'R$ 30 mil a R$ 50 mil', score: 3 },
-      { text: 'Acima de R$ 50 mil', score: 3 },
+      { text: 'Não existe jornada: o cliente compra uma vez e a relação acaba', score: 1 },
+      {
+        text: 'Tenho uma solução principal, mas nenhuma oferta de entrada ou continuidade',
+        score: 2,
+      },
+      { text: 'Gostaria de ter esteira com entrada, principal, recorrência e premium', score: 3 },
+      {
+        text: 'Já tenho catálogo amplo de produtos, mas falta arquitetura estratégica de valor',
+        score: 3,
+      },
     ],
   },
   {
-    question: 'Como você entrega seu conhecimento hoje?',
+    question: 'Qual é o seu objetivo prioritário nos próximos meses?',
     options: [
-      { text: 'Troco horas por dinheiro', score: 1 },
-      { text: 'Tenho alguns serviços empacotados', score: 2 },
-      { text: 'Já tenho um produto mas quero otimizar', score: 3 },
-      { text: 'Ainda não comercializo meu conhecimento', score: 1 },
+      {
+        text: 'Parar de vender serviço solto e organizar minha expertise em ofertas claras',
+        score: 1,
+      },
+      {
+        text: 'Criar uma jornada lógica que conduza da primeira compra à oferta premium',
+        score: 3,
+      },
+      { text: 'Aumentar recorrência, previsibilidade e recompra no meu ecossistema', score: 2 },
+      { text: 'Implementar a metodologia 5D e colocar minha esteira no mercado', score: 3 },
     ],
   },
 ]
@@ -63,26 +78,26 @@ interface QuizResult {
 function calculateResult(score: number): QuizResult {
   if (score >= 9) {
     return {
-      title: 'Perfil Premium — Pronto para Escala',
+      title: 'Pronto para a Arquitetura da Esteira Completa',
       description:
-        'A Mentoria Trajetória de Valor 5D é perfeita para você! Você já tem a base, a experiência e o momentum certo. O que falta é o método estruturado para transformar tudo isso em uma oferta exclusiva de alto valor e alcançar 5 dígitos mensais com previsibilidade.',
-      interest: 'Diagnóstico: Perfil Premium — Pronto para Escala',
+        'Você já tem ativos valiosos, serviços consolidados e capacidade de entrega. O seu grande salto está na arquitetura estratégica: conectar suas soluções em uma esteira lógica (Entrada → Solução Principal → Recorrência → Premium → Continuidade), gerando maior LTV e retenção.',
+      interest: 'Diagnóstico: Pronto para Esteira Completa (Entrada à Premium)',
       icon: 'trophy',
     }
   } else if (score >= 6) {
     return {
-      title: 'Perfil em Ascensão — Alto Potencial',
+      title: 'Momento de Transição: Do Serviço Solto à Esteira',
       description:
-        'Sua trajetória tem grande potencial! Você já deu os primeiros passos e tem conhecimento valioso. A Mentoria 5D vai te ajudar a estruturar, posicionar e escalar seu conhecimento para transformá-lo em um negócio rentável e previsível.',
-      interest: 'Diagnóstico: Perfil em Ascensão — Alto Potencial',
+        'Você gera valor e tem expertise real, mas ainda opera no ciclo cansativo de vender e recomeçar do zero. O Esteira de Valor 5D vai desenhar a jornada ideal para que cada cliente avance naturalmente pelas suas soluções.',
+      interest: 'Diagnóstico: Transição do Serviço Solto à Esteira Estruturada',
       icon: 'trending',
     }
   }
   return {
-    title: 'Perfil em Construção — Jornada Promissora',
+    title: 'Fase de Diagnóstico e Estruturação de Ativos',
     description:
-      'Você está no início de uma transformação poderosa! A Mentoria 5D vai te dar a estrutura, o método e o direcionamento necessários para construir do zero um negócio de alto valor baseado no seu conhecimento.',
-    interest: 'Diagnóstico: Perfil em Construção — Jornada Promissora',
+      'Você tem conhecimento e capacidade de entrega, mas precisa mapear seus ativos de valor e empacotar soluções claras antes de tentar vender mais. O Método 5D vai guiar você passo a passo na estruturação da sua primeira esteira.',
+    interest: 'Diagnóstico: Estruturação Inicial de Ativos de Valor',
     icon: 'sprout',
   }
 }
@@ -154,7 +169,7 @@ export function DiagnosticQuiz({ onComplete }: { onComplete: (result: string) =>
               size="lg"
               className="bg-primary text-white hover:bg-primary/90 text-base font-bold py-6 px-8"
             >
-              Quero começar minha transformação
+              Quero construir minha Esteira de Valor
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button

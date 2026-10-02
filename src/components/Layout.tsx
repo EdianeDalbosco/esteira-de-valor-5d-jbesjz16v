@@ -42,16 +42,34 @@ export default function Layout() {
         <div className="container mx-auto px-4 flex justify-center items-center">
           <nav className="hidden md:flex gap-8 items-center">
             <button
-              onClick={() => scrollTo('method')}
+              onClick={() => scrollTo('metodo')}
               className={cn(
                 'text-sm font-semibold hover:text-accent transition-colors',
                 scrolled ? 'text-gray-700' : 'text-white/90',
               )}
             >
-              O Método
+              Método 5D
             </button>
             <button
-              onClick={() => scrollTo('audience')}
+              onClick={() => scrollTo('arquitetura')}
+              className={cn(
+                'text-sm font-semibold hover:text-accent transition-colors',
+                scrolled ? 'text-gray-700' : 'text-white/90',
+              )}
+            >
+              Arquitetura da Esteira
+            </button>
+            <button
+              onClick={() => scrollTo('entregaveis')}
+              className={cn(
+                'text-sm font-semibold hover:text-accent transition-colors',
+                scrolled ? 'text-gray-700' : 'text-white/90',
+              )}
+            >
+              Entregáveis
+            </button>
+            <button
+              onClick={() => scrollTo('publico')}
               className={cn(
                 'text-sm font-semibold hover:text-accent transition-colors',
                 scrolled ? 'text-gray-700' : 'text-white/90',
@@ -60,13 +78,13 @@ export default function Layout() {
               Para Quem É
             </button>
             <button
-              onClick={() => scrollTo('mentor')}
+              onClick={() => scrollTo('mentalidade')}
               className={cn(
                 'text-sm font-semibold hover:text-accent transition-colors',
                 scrolled ? 'text-gray-700' : 'text-white/90',
               )}
             >
-              A Mentora
+              Mentalidade
             </button>
             <button
               onClick={() => scrollTo('contato')}
@@ -75,7 +93,7 @@ export default function Layout() {
                 scrolled ? 'text-gray-700' : 'text-white/90',
               )}
             >
-              Entre em Contato
+              Contato
             </button>
             <a
               href={WHATSAPP_URL}
@@ -110,22 +128,34 @@ export default function Layout() {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-xl flex flex-col py-2 border-t z-50 animate-fade-in-down">
             <button
-              onClick={() => scrollTo('method')}
+              onClick={() => scrollTo('metodo')}
               className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
             >
-              O Método
+              Método 5D
             </button>
             <button
-              onClick={() => scrollTo('audience')}
+              onClick={() => scrollTo('arquitetura')}
+              className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
+            >
+              Arquitetura da Esteira
+            </button>
+            <button
+              onClick={() => scrollTo('entregaveis')}
+              className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
+            >
+              Entregáveis
+            </button>
+            <button
+              onClick={() => scrollTo('publico')}
               className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
             >
               Para Quem É
             </button>
             <button
-              onClick={() => scrollTo('mentor')}
+              onClick={() => scrollTo('mentalidade')}
               className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
             >
-              A Mentora
+              Mudança de Mentalidade
             </button>
             <button
               onClick={() => scrollTo('contato')}
@@ -168,16 +198,17 @@ export default function Layout() {
               className="h-auto w-32 md:w-36 mb-4 object-contain"
             />
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
-              Transforme sua trajetória em uma oferta exclusiva — e sua oferta em um movimento de 5
-              dígitos mensais. A mentoria definitiva para especialistas de alto nível.
+              Construa uma esteira estratégica de produtos e serviços que transforme sua expertise
+              em ofertas organizadas, conectadas e capazes de conduzir o cliente da primeira compra
+              à solução premium.
             </p>
           </div>
           <div className="md:col-span-3">
-            <h4 className="font-bold mb-5 text-gray-200">Links Rápidos</h4>
+            <h4 className="font-bold mb-5 text-gray-200">Navegação</h4>
             <ul className="space-y-3">
               <li>
                 <button
-                  onClick={() => scrollTo('method')}
+                  onClick={() => scrollTo('metodo')}
                   className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
                   O Método 5D
@@ -185,18 +216,34 @@ export default function Layout() {
               </li>
               <li>
                 <button
-                  onClick={() => scrollTo('audience')}
+                  onClick={() => scrollTo('arquitetura')}
                   className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
-                  Para Quem É
+                  Arquitetura da Esteira
                 </button>
               </li>
               <li>
                 <button
-                  onClick={() => scrollTo('mentor')}
+                  onClick={() => scrollTo('entregaveis')}
                   className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
-                  A Mentora
+                  Principais Entregáveis
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollTo('publico')}
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Para Quem É / Não É
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollTo('mentalidade')}
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Mudança de Mentalidade
                 </button>
               </li>
               <li>
@@ -235,8 +282,9 @@ export default function Layout() {
               <h4 className="font-bold text-gray-200 mb-2 text-sm">Aviso Legal</h4>
               <p className="text-xs text-gray-500 leading-relaxed">
                 Os resultados compartilhados ou projetados dependem da execução individual,
-                dedicação e diversos fatores externos. A Trajetória de Valor 5D fornece o método,
-                ferramentas e direcionamento, mas não garante ganhos financeiros específicos.
+                dedicação e diversos fatores externos. A Esteira de Valor 5D fornece a metodologia,
+                arquitetura estratégica e direcionamento, mas não garante ganhos financeiros
+                automáticos sem execução.
               </p>
             </div>
             <div className="flex gap-4 pt-3">
@@ -256,7 +304,10 @@ export default function Layout() {
           </div>
         </div>
         <div className="container mx-auto px-4 mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
-          <span>© {new Date().getFullYear()} Ediane Dalbosco. Todos os direitos reservados.</span>
+          <span>
+            © {new Date().getFullYear()} Esteira de Valor 5D • Ediane Dalbosco. Todos os direitos
+            reservados.
+          </span>
         </div>
       </footer>
     </div>

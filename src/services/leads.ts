@@ -16,5 +16,5 @@ export interface Lead extends LeadData {
 
 export const createLead = (data: LeadData) => pb.collection('leads').create<Lead>(data)
 
-export const getLeads = () => pb.collection('leads').getFullList({ sort: '-created' })
+export const getLeads = () => pb.collection('leads').getFullList<Lead>({ sort: '-created' })
 export const deleteLead = (id: string) => pb.collection('leads').delete(id)

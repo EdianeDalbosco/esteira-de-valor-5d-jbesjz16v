@@ -52,7 +52,7 @@ export function LeadForm({ diagnosticResult }: { diagnosticResult?: string }) {
         email: email.trim(),
         whatsapp: whatsapp.trim(),
         message: message.trim(),
-        interest: diagnosticResult || 'Mentoria Trajetória de Valor 5D',
+        interest: diagnosticResult || 'Programa Esteira de Valor 5D',
       })
       setName('')
       setEmail('')
@@ -87,10 +87,11 @@ export function LeadForm({ diagnosticResult }: { diagnosticResult?: string }) {
     <Card className="w-full max-w-xl mx-auto shadow-xl border-gray-200 bg-white">
       <CardHeader className="text-center pb-6">
         <CardTitle className="text-2xl md:text-3xl font-bold text-primary">
-          Solicite seu atendimento
+          Construa sua Esteira de Valor 5D
         </CardTitle>
         <CardDescription className="text-gray-600 text-base">
-          Preencha o formulário e nossa equipe entrará em contato com você.
+          Preencha seus dados para receber o contato da nossa equipe estratégica e dar o próximo
+          passo no seu negócio.
         </CardDescription>
         {diagnosticResult && (
           <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-sm font-semibold text-accent">

@@ -40,7 +40,7 @@ export default function LeadsDashboard() {
   const loadLeads = async () => {
     try {
       const data = await getLeads()
-      setLeads(data as Lead[])
+      setLeads(data)
     } catch {
       toast({ title: 'Erro ao carregar leads', variant: 'destructive' })
     } finally {

@@ -51,7 +51,7 @@ onRecordAfterCreateSuccess((e) => {
     try {
       var mailClient = $app.newMailClient()
       mailClient.send({
-        from: { address: 'noreply@trajetoriadevalor.com', name: 'Trajetoria de Valor' },
+        from: { address: 'noreply@esteiradevalor.com', name: 'Esteira de Valor 5D' },
         to: [{ address: 'edianedalbosco@gmail.com', name: 'Ediane Dalbosco' }],
         subject: 'Novo Lead Recebido: ' + name,
         html: htmlBody,

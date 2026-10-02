@@ -16,20 +16,20 @@ export default function ThankYou() {
 
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-6 text-sm font-semibold text-accent">
             <Sparkles size={16} />
-            <span>Trajetória de Valor 5D</span>
+            <span>Esteira de Valor 5D</span>
           </div>
 
           <h1 className="text-3xl md:text-4xl font-extrabold text-primary mb-4 leading-tight tracking-tight">
-            Conhecimento não solto{' '}
+            Do serviço solto à{' '}
             <span className="text-accent relative inline-block">
-              gera caixa.
+              Esteira de Valor.
               <span className="absolute -bottom-1 left-0 w-full h-1 bg-accent/30 rounded-full"></span>
             </span>
           </h1>
 
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            Recebemos suas informações e entraremos em contato em breve para iniciar sua
-            transformação.
+            Recebemos suas informações com sucesso! Em breve nossa equipe entrará em contato para
+            apresentar os próximos passos para estruturar a arquitetura de ofertas do seu negócio.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
