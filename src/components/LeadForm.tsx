@@ -10,7 +10,8 @@ import { useToast } from '@/hooks/use-toast'
 import { createLead } from '@/services/leads'
 import { extractFieldErrors, type FieldErrors } from '@/lib/pocketbase/errors'
 
-import { WHATSAPP_LINK, WHATSAPP_MESSAGES } from '@/lib/constants'
+import { WHATSAPP_MESSAGES } from '@/lib/constants'
+import { WhatsAppLink } from '@/components/WhatsAppLink'
 
 export function LeadForm({ diagnosticResult }: { diagnosticResult?: string }) {
   const [name, setName] = useState('')
@@ -181,20 +182,16 @@ export function LeadForm({ diagnosticResult }: { diagnosticResult?: string }) {
                 </>
               )}
             </Button>
-            <a
-              href={
+            <WhatsAppLink
+              message={
                 diagnosticResult
-                  ? WHATSAPP_LINK(
-                      `Olá! Acabei de me inscrever no Esteira de Valor 5D e quero confirmar meu horário da Chamada Estratégica (${diagnosticResult}).`,
-                    )
-                  : WHATSAPP_LINK(WHATSAPP_MESSAGES.confirmarHorario)
+                  ? `Olá! Acabei de me inscrever no Esteira de Valor 5D e quero confirmar meu horário da Chamada Estratégica (${diagnosticResult}).`
+                  : WHATSAPP_MESSAGES.confirmarHorario
               }
-              target="_blank"
-              rel="noopener noreferrer"
               className="flex-1 h-14 inline-flex items-center justify-center gap-2 bg-accent text-primary px-6 rounded-md text-base font-bold hover:bg-accent/90 transition-all hover:scale-[1.02] w-full sm:w-auto"
             >
               Falar no WhatsApp
-            </a>
+            </WhatsAppLink>
           </div>
         </form>
       </CardContent>

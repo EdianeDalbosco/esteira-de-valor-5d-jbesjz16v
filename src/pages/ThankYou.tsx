@@ -37,7 +37,8 @@ import logoImage from '@/assets/logo-edvanced-17-7aa6b.png'
 // Para alterar, insira o link real (ex.: 'https://calendly.com/sua-empresa/chamada-estrategica')
 export const AGENDA_URL = 'https://calendly.com/'
 
-import { WHATSAPP_NUMBER, WHATSAPP_LINK, WHATSAPP_MESSAGES } from '@/lib/constants'
+import { WHATSAPP_NUMBER, WHATSAPP_MESSAGES } from '@/lib/constants'
+import { WhatsAppLink } from '@/components/WhatsAppLink'
 
 export { WHATSAPP_NUMBER as WHATSAPP_PHONE }
 
@@ -313,15 +314,13 @@ export default function ThankYou() {
                     </div>
                   </div>
 
-                  <a
-                    href={WHATSAPP_LINK(WHATSAPP_MESSAGES.confirmarHorario)}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <WhatsAppLink
+                    message={WHATSAPP_MESSAGES.confirmarHorario}
                     className="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 px-5 h-12 rounded-xl text-sm font-semibold transition-all"
                   >
                     <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
                     <span>Confirmar horário no WhatsApp</span>
-                  </a>
+                  </WhatsAppLink>
 
                   <p className="text-[11px] text-gray-400 leading-tight pt-1">
                     🔒 Sessão 100% individual e alinhada ao seu mercado.
@@ -551,15 +550,13 @@ export default function ThankYou() {
                   <Calendar className="w-4 h-4" />
                   Garantir Horário
                 </a>
-                <a
-                  href={WHATSAPP_LINK(WHATSAPP_MESSAGES.confirmarHorario)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <WhatsAppLink
+                  message={WHATSAPP_MESSAGES.confirmarHorario}
                   className="inline-flex items-center justify-center gap-2 bg-white/10 text-white hover:bg-white/20 px-5 h-12 rounded-xl text-sm font-semibold transition-all border border-white/20 text-center"
                 >
                   <MessageCircle className="w-4 h-4 text-emerald-400" />
                   WhatsApp
-                </a>
+                </WhatsAppLink>
               </div>
             </div>
           </div>

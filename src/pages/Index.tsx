@@ -29,7 +29,8 @@ import {
 import mentorImage from '@/assets/as-portas-estao-1-21a63.png'
 import heroPhoto from '@/assets/img2469-f312a.jpg'
 
-import { WHATSAPP_LINK, WHATSAPP_MESSAGES } from '@/lib/constants'
+import { WHATSAPP_MESSAGES } from '@/lib/constants'
+import { WhatsAppLink } from '@/components/WhatsAppLink'
 
 const SITE_TITLE =
   'EDVANCED | Esteira de Valor 5D — Do serviço solto à jornada estratégica de valor'
@@ -2174,14 +2175,12 @@ export default function Index() {
                   Ir para o formulário de contato
                 </button>
                 <span className="hidden sm:inline text-gray-600">•</span>
-                <a
-                  href={WHATSAPP_LINK(WHATSAPP_MESSAGES.garantirVaga)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <WhatsAppLink
+                  message={WHATSAPP_MESSAGES.garantirVaga}
                   className="text-xs text-accent hover:underline inline-flex items-center gap-1 font-semibold"
                 >
                   Atendimento direto no WhatsApp →
-                </a>
+                </WhatsAppLink>
               </div>{' '}
             </div>
           </ScrollReveal>

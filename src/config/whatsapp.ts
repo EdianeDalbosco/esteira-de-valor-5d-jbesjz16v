@@ -7,7 +7,13 @@ export {
   WHATSAPP_MESSAGES,
   WHATSAPP_LINK,
   getWhatsAppUrl,
+  getWhatsAppDesktopUrl,
+  getWhatsAppMobileUrl,
+  isMobileDevice,
 } from '@/lib/constants'
+
+export { WhatsAppLink } from '@/components/WhatsAppLink'
+export type { WhatsAppLinkProps } from '@/components/WhatsAppLink'
 
 import { WHATSAPP_LINK, WHATSAPP_MESSAGES } from '@/lib/constants'
 
