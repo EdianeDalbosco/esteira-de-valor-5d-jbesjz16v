@@ -1066,7 +1066,7 @@ export default function Index() {
                   Alinhamento de Expectativas
                 </span>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
-                  Para quem é — e para quem <span className="text-accent">não é</span>
+                  Para quem é, e para quem <span className="text-accent">não é</span>
                 </h2>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                   A Esteira de Valor 5D é um processo sério de arquitetura de negócios. Queremos
