@@ -27,7 +27,7 @@ import {
   ClipboardCheck,
 } from 'lucide-react'
 import mentorImage from '@/assets/as-portas-estao-1-21a63.png'
-import heroPhoto from '@/assets/dc82c742-2c3b-4988-97bb-f7a957608cdb-038c1.jpg'
+import heroPhoto from '@/assets/img2469-f312a.jpg'
 
 import { WHATSAPP_LINK, WHATSAPP_MESSAGES } from '@/lib/constants'
 
@@ -209,7 +209,7 @@ export default function Index() {
                 <img
                   src={heroPhoto}
                   alt="Ediane Dalbosco, Estrategista de Negócios e Criadora do Método Esteira de Valor 5D"
-                  className="relative z-10 w-60 md:w-72 aspect-[3/4] rounded-2xl object-cover object-top shadow-2xl border-4 border-white/20"
+                  className="relative z-10 w-60 md:w-72 aspect-[3/4] rounded-2xl object-cover object-center shadow-2xl border-4 border-white/20"
                 />
                 <div className="absolute -bottom-4 -left-4 z-20 bg-primary/95 border border-accent/40 text-white p-3.5 rounded-xl shadow-xl backdrop-blur-md max-w-[240px]">
                   <p className="text-[11px] text-accent font-bold uppercase tracking-wider mb-0.5">
