@@ -2,7 +2,22 @@ import { useState } from 'react'
 import { Progress } from '@/components/ui/progress'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { ArrowRight, ArrowLeft, RotateCcw, Trophy, TrendingUp, Sprout } from 'lucide-react'
+import {
+  ArrowRight,
+  ArrowLeft,
+  RotateCcw,
+  Trophy,
+  TrendingUp,
+  Sprout,
+  Gift,
+  Magnet,
+  ShoppingBag,
+  Target,
+  Repeat,
+  Crown,
+  FastForward,
+  Sparkles,
+} from 'lucide-react'
 
 interface QuizOption {
   text: string
@@ -104,6 +119,57 @@ function calculateResult(score: number): QuizResult {
 
 const ICONS = { trophy: Trophy, trending: TrendingUp, sprout: Sprout }
 
+const VALUE_LAYERS = [
+  {
+    step: '01',
+    name: 'ATRAÇÃO',
+    role: 'Porta de Entrada Gratuita',
+    desc: 'Conteúdo estratégico, diagnóstico ou material de alto valor que atrai o público certo.',
+    icon: Magnet,
+    badgeBg: 'bg-blue-500/10 text-blue-600 border-blue-200',
+  },
+  {
+    step: '02',
+    name: 'ENTRADA',
+    role: 'Primeira Experiência Paga',
+    desc: 'Solução de baixo risco financeiro que quebra a barreira da compra e transforma leads em clientes.',
+    icon: ShoppingBag,
+    badgeBg: 'bg-emerald-500/10 text-emerald-600 border-emerald-200',
+  },
+  {
+    step: '03',
+    name: 'SOLUÇÃO PRINCIPAL',
+    role: 'Carro-Chefe de Transformação',
+    desc: 'O produto ou serviço responsável pela principal transformação e pelo coração financeiro do negócio.',
+    icon: Target,
+    badgeBg: 'bg-accent/10 text-accent border-accent/20',
+  },
+  {
+    step: '04',
+    name: 'RECORRÊNCIA',
+    role: 'Acompanhamento & Manutenção',
+    desc: 'Acompanhamento contínuo que assegura previsibilidade mensal de receita e evolução do cliente.',
+    icon: Repeat,
+    badgeBg: 'bg-indigo-500/10 text-indigo-600 border-indigo-200',
+  },
+  {
+    step: '05',
+    name: 'PREMIUM',
+    role: 'Alta Margem & Proximidade',
+    desc: 'Oferta com profundidade máxima, proximidade ou mentoria exclusiva para os clientes mais qualificados.',
+    icon: Crown,
+    badgeBg: 'bg-amber-500/10 text-amber-600 border-amber-200',
+  },
+  {
+    step: '06',
+    name: 'CONTINUIDADE',
+    role: 'Próximo Ciclo de Crescimento',
+    desc: 'O próximo estágio de evolução para clientes que concluíram fases anteriores e continuam com você.',
+    icon: FastForward,
+    badgeBg: 'bg-purple-500/10 text-purple-600 border-purple-200',
+  },
+]
+
 export function DiagnosticQuiz({ onComplete }: { onComplete: (result: string) => void }) {
   const [currentStep, setCurrentStep] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
@@ -149,41 +215,104 @@ export function DiagnosticQuiz({ onComplete }: { onComplete: (result: string) =>
   if (result) {
     const Icon = ICONS[result.icon]
     return (
-      <Card className="w-full max-w-2xl mx-auto shadow-2xl border-accent/20 bg-white animate-fade-in-up">
-        <CardContent className="p-8 md:p-12 text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-accent/10 rounded-full mb-6">
-            <Icon className="w-10 h-10 text-accent" />
-          </div>
-          <span className="text-accent font-bold tracking-widest uppercase text-sm mb-4 block">
-            Resultado do Diagnóstico
-          </span>
-          <h3 className="text-2xl md:text-4xl font-bold text-primary mb-6 leading-tight">
-            {result.title}
-          </h3>
-          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-xl mx-auto">
-            {result.description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              onClick={handleGoToForm}
-              size="lg"
-              className="bg-primary text-white hover:bg-primary/90 text-base font-bold py-6 px-8"
-            >
-              Quero construir minha Esteira de Valor
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              onClick={handleRestart}
-              variant="outline"
-              size="lg"
-              className="text-base font-semibold py-6 px-8"
-            >
-              <RotateCcw className="mr-2 h-5 w-5" />
-              Refazer
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      <div className="w-full max-w-3xl mx-auto space-y-6 animate-fade-in-up">
+        <Card className="shadow-2xl border-accent/20 bg-white">
+          <CardContent className="p-8 md:p-12 text-center">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-accent/10 rounded-full mb-6">
+              <Icon className="w-10 h-10 text-accent" />
+            </div>
+            <span className="text-accent font-bold tracking-widest uppercase text-sm mb-4 block">
+              Resultado do Diagnóstico
+            </span>
+            <h3 className="text-2xl md:text-4xl font-bold text-primary mb-6 leading-tight">
+              {result.title}
+            </h3>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8 max-w-xl mx-auto">
+              {result.description}
+            </p>
+
+            {/* BLOCO DE PRESENTE: ARQUITETURA DA ESTEIRA DE VALOR */}
+            <div className="mt-8 pt-8 border-t border-gray-100 text-left bg-gradient-to-b from-amber-50/60 via-amber-50/30 to-transparent rounded-2xl p-6 md:p-8 border border-amber-200/70">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/15 text-accent text-xs font-bold uppercase tracking-wider">
+                  <Gift className="w-3.5 h-3.5" />
+                  Seu Presente Exclusivo
+                </span>
+                <span className="inline-flex items-center gap-1 text-xs font-semibold text-amber-700 bg-amber-100/70 px-2.5 py-0.5 rounded-full">
+                  <Sparkles className="w-3 h-3 text-amber-600" />
+                  Por responder ao diagnóstico
+                </span>
+              </div>
+
+              <h4 className="text-xl md:text-2xl font-bold text-primary mb-2">
+                A Estratégia da Arquitetura de Valor
+              </h4>
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-6">
+                Como agradecimento pelo seu tempo, liberamos o mapa estratégico das{' '}
+                <strong className="text-primary font-semibold">6 camadas essenciais</strong> da
+                Esteira de Valor 5D — a mesma lógica que estrutura negócios para parar de vender
+                serviço avulso e construir um ecossistema com múltiplos pontos de monetização:
+              </p>
+
+              {/* Grid compacto das 6 camadas */}
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3.5">
+                {VALUE_LAYERS.map((layer) => {
+                  const LayerIcon = layer.icon
+                  return (
+                    <div
+                      key={layer.step}
+                      className="bg-white rounded-xl p-4 border border-gray-200/90 shadow-sm hover:border-accent/60 hover:shadow-md transition-all flex flex-col justify-between"
+                    >
+                      <div>
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-xs font-black tracking-wider text-gray-400">
+                            CAMADA {layer.step}
+                          </span>
+                          <div className="w-8 h-8 rounded-lg bg-primary/5 text-primary flex items-center justify-center">
+                            <LayerIcon className="w-4 h-4 text-accent" />
+                          </div>
+                        </div>
+                        <h5 className="text-sm font-bold text-primary mb-1">{layer.name}</h5>
+                        <span className="text-[11px] font-semibold text-accent block mb-2 leading-snug">
+                          {layer.role}
+                        </span>
+                        <p className="text-xs text-gray-600 leading-relaxed">{layer.desc}</p>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+
+              <div className="mt-6 p-4 rounded-xl bg-white border border-amber-200/80 flex items-center justify-between flex-wrap gap-3">
+                <p className="text-xs text-gray-600">
+                  💡 <strong className="text-primary">Próximo passo:</strong> Podemos aplicar essa
+                  arquitetura de forma personalizada ao seu negócio e às suas ofertas.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <Button
+                onClick={handleGoToForm}
+                size="lg"
+                className="bg-primary text-white hover:bg-primary/90 text-base font-bold py-6 px-8 shadow-lg shadow-primary/20"
+              >
+                Quero construir minha Esteira de Valor
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button
+                onClick={handleRestart}
+                variant="outline"
+                size="lg"
+                className="text-base font-semibold py-6 px-8"
+              >
+                <RotateCcw className="mr-2 h-5 w-5" />
+                Refazer diagnóstico
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     )
   }
 
