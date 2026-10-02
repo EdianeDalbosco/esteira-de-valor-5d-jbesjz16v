@@ -28,6 +28,8 @@ import {
   Lightbulb,
   ArrowRightLeft,
   ChevronRight,
+  ChevronDown,
+  ClipboardCheck,
 } from 'lucide-react'
 import mentorImage from '@/assets/as-portas-estao-1-21a63.png'
 import heroPhoto from '@/assets/img7990-74f78.jpg'
@@ -35,8 +37,75 @@ import heroPhoto from '@/assets/img7990-74f78.jpg'
 const WHATSAPP_URL = 'https://wa.me/5565981003969'
 const SITE_TITLE = 'Esteira de Valor 5D | Arquitetura Estratégica de Produtos e Serviços'
 
+const MAIN_PAINS = [
+  {
+    title: 'Vende serviços isolados',
+    desc: 'Comercializa apenas o que o cliente pede, sem uma continuidade formatada.',
+  },
+  {
+    title: 'Novo cliente a cada venda',
+    desc: 'Todo mês precisa começar do zero para fechar a conta do faturamento.',
+  },
+  {
+    title: 'Ofertas sem conexão lógica',
+    desc: 'Várias opções no portfólio, mas nenhuma conduz naturalmente à próxima compra.',
+  },
+  {
+    title: 'Preço ancorado em horas',
+    desc: 'Entrega muito resultado, mas fatura com base no tempo e na presença física.',
+  },
+]
+
+const OTHER_PAINS = [
+  {
+    title: 'Cria produtos por oportunidade',
+    desc: 'Lança ofertas conforme surgem ideias, sem alinhamento com a arquitetura do negócio.',
+  },
+  {
+    title: 'Não sabe qual é o produto principal',
+    desc: 'Falta definição clara do que é carro-chefe e qual oferta gera maior impacto.',
+  },
+  {
+    title: 'Sem jornada clara para o cliente',
+    desc: 'Não existe um caminho lógico para o cliente subir de nível dentro da empresa.',
+  },
+  {
+    title: 'Perde oportunidades de recorrência',
+    desc: 'Clientes satisfeitos vão embora porque não encontram uma oferta de continuidade.',
+  },
+  {
+    title: 'Dificuldade em ofertas premium',
+    desc: 'Insegurança para desenhar e precificar soluções exclusivas de alto valor agregado.',
+  },
+  {
+    title: 'Conhecimento não empacotado',
+    desc: 'Muita experiência acumulada na mente, mas dificuldade de formatar em método.',
+  },
+  {
+    title: 'Escopo e entregáveis confusos',
+    desc: 'Falta clareza nos limites do escopo, gerando desgaste na entrega ao cliente.',
+  },
+  {
+    title: 'Entrega muito e captura pouco valor',
+    desc: 'Gera transformações gigantescas para o comprador com remuneração desproporcional.',
+  },
+  {
+    title: 'Dependência da própria presença',
+    desc: 'O faturamento trava porque tudo exige a presença física e o tempo direto do especialista.',
+  },
+  {
+    title: 'Crescer sem dobrar carga horária',
+    desc: 'Sensação de que aumentar o faturamento exigirá trabalhar até a exaustão.',
+  },
+  {
+    title: 'Recompra travada',
+    desc: 'Clientes que poderiam comprar novamente saem sem a próxima oferta estruturada.',
+  },
+]
+
 export default function Index() {
   const [diagnosticResult, setDiagnosticResult] = useState<string | null>(null)
+  const [showAllPains, setShowAllPains] = useState(false)
 
   useEffect(() => {
     document.title = SITE_TITLE
@@ -52,8 +121,11 @@ export default function Index() {
 
   return (
     <div className="overflow-hidden bg-background">
-      {/* 1. HERO SECTION */}
-      <section id="hero" className="relative min-h-screen flex items-center pt-28 pb-20">
+      {/* 1. HERO SECTION — LEVE, ESCANEÁVEL E FOCADO EM CONVERSÃO */}
+      <section
+        id="hero"
+        className="relative min-h-[92vh] flex items-center pt-24 pb-16 lg:pt-32 lg:pb-24"
+      >
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{
@@ -66,82 +138,88 @@ export default function Index() {
 
         <div className="container mx-auto px-4 z-20 relative text-white">
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-14">
-            <div className="flex-1 max-w-4xl w-full">
+            <div className="flex-1 max-w-3xl w-full">
+              {/* Promessa Curta / Chip */}
               <ScrollReveal animation="animate-fade-in-up">
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 text-sm font-semibold backdrop-blur-md text-accent shadow-sm">
-                  <Sparkles size={16} />
-                  <span>Método 5D de Arquitetura de Negócios</span>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/20 border border-accent/40 text-accent font-semibold text-xs md:text-sm tracking-wide uppercase mb-5 backdrop-blur-md">
+                  <Sparkles size={14} className="shrink-0" />
+                  <span>Do serviço solto à Esteira de Valor</span>
                 </div>
               </ScrollReveal>
 
+              {/* Headline Provocativa & Direta */}
               <ScrollReveal animation="animate-fade-in-up" delay={100}>
-                <div className="mb-4 inline-block bg-accent/20 border border-accent/30 text-accent font-bold px-3 py-1 rounded text-xs md:text-sm tracking-wide uppercase">
-                  Do serviço solto à Esteira de Valor
-                </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight text-white">
-                  Construa uma esteira estratégica de produtos e serviços que transforme sua
-                  expertise em ofertas{' '}
-                  <span className="text-accent relative inline-block">
-                    organizadas, conectadas
-                    <span className="absolute -bottom-2 left-0 w-full h-1.5 bg-accent/30 rounded-full"></span>
-                  </span>{' '}
-                  e capazes de conduzir o cliente da primeira compra à solução premium.
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-extrabold leading-[1.15] mb-5 tracking-tight text-white">
+                  Seu problema não é ter poucos produtos.{' '}
+                  <span className="text-accent">
+                    É não ter uma esteira que conecte o que você vende.
+                  </span>
                 </h1>
               </ScrollReveal>
 
-              <ScrollReveal animation="animate-fade-in-up" delay={200}>
-                <div className="border-l-4 border-accent pl-4 my-6 bg-white/5 py-3 rounded-r-lg">
-                  <p className="text-lg md:text-xl font-bold text-accent">
-                    "Seu problema não é ter poucos produtos. É não ter uma esteira que conecte o que
-                    você vende."
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal animation="animate-fade-in-up" delay={300}>
-                <p className="text-base md:text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl font-light">
-                  Construa, através do Método 5D, uma esteira estratégica de produtos e serviços que
-                  organize sua expertise, conecte suas ofertas e conduza seu cliente da primeira
-                  solução à sua oferta premium.
+              {/* Frase Curta de Apoio */}
+              <ScrollReveal animation="animate-fade-in-up" delay={150}>
+                <p className="text-base sm:text-lg text-gray-200 mb-6 leading-relaxed max-w-2xl font-normal">
+                  Através do <strong className="text-white font-semibold">Método 5D</strong>,
+                  transforme sua expertise em ofertas organizadas e conectadas que conduzem seu
+                  cliente da primeira compra à solução premium.
                 </p>
               </ScrollReveal>
 
-              <ScrollReveal animation="animate-fade-in-up" delay={400}>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-3 bg-accent text-primary px-8 py-5 rounded-md text-base md:text-lg font-bold hover:bg-accent/90 transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(212,175,55,0.5)] group w-full sm:w-auto text-center"
-                  >
-                    CONSTRUIR MINHA ESTEIRA DE VALOR
-                    <ArrowRight className="group-hover:translate-x-1 transition-transform shrink-0" />
-                  </a>
+              {/* 3 Bullets / Chips Resumindo o Benefício */}
+              <ScrollReveal animation="animate-fade-in-up" delay={200}>
+                <div className="flex flex-wrap gap-2.5 sm:gap-3 mb-8">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 border border-white/15 text-xs sm:text-sm font-medium text-gray-100 backdrop-blur-sm">
+                    <CheckCircle2 size={15} className="text-accent shrink-0" />
+                    Ecossistema conectado
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 border border-white/15 text-xs sm:text-sm font-medium text-gray-100 backdrop-blur-sm">
+                    <CheckCircle2 size={15} className="text-accent shrink-0" />
+                    Fim do ciclo do zero
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 border border-white/15 text-xs sm:text-sm font-medium text-gray-100 backdrop-blur-sm">
+                    <CheckCircle2 size={15} className="text-accent shrink-0" />
+                    Ofertas de alta margem
+                  </span>
+                </div>
+              </ScrollReveal>
+
+              {/* CTAs Principais */}
+              <ScrollReveal animation="animate-fade-in-up" delay={250}>
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   <button
-                    onClick={() => scrollTo('metodo')}
-                    className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white hover:bg-white/10 px-6 py-5 rounded-md text-base font-semibold transition-all w-full sm:w-auto"
+                    onClick={() => scrollTo('contato')}
+                    className="inline-flex items-center justify-center gap-2.5 bg-accent text-primary px-7 py-4 rounded-xl text-base font-bold hover:bg-accent/90 transition-all hover:scale-[1.02] shadow-[0_0_35px_-8px_rgba(212,175,55,0.45)] group w-full sm:w-auto text-center"
                   >
-                    Conhecer o Método 5D
+                    Construir Minha Esteira de Valor
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform shrink-0" />
+                  </button>
+                  <button
+                    onClick={() => scrollTo('diagnostico')}
+                    className="inline-flex items-center justify-center gap-2 border border-white/30 text-white hover:bg-white/10 px-5 py-4 rounded-xl text-base font-semibold transition-all w-full sm:w-auto"
+                  >
+                    <ClipboardCheck size={18} className="text-accent shrink-0" />
+                    Fazer Diagnóstico Gratuito
                   </button>
                 </div>
               </ScrollReveal>
             </div>
 
+            {/* Imagem / Card Visual */}
             <div className="flex justify-center lg:justify-end items-center lg:w-2/5 mt-4 lg:mt-0">
               <div className="relative">
-                <div className="absolute inset-0 bg-accent rounded-2xl transform translate-x-4 translate-y-4 opacity-30 blur-sm"></div>
+                <div className="absolute inset-0 bg-accent rounded-2xl transform translate-x-3 translate-y-3 opacity-30 blur-sm"></div>
                 <img
                   src={heroPhoto}
                   alt="Ediane Dalbosco, Estrategista de Negócios e Criadora do Método Esteira de Valor 5D"
-                  className="relative z-10 w-64 md:w-80 rounded-2xl object-cover shadow-2xl border-4 border-white/20"
+                  className="relative z-10 w-60 md:w-72 rounded-2xl object-cover shadow-2xl border-4 border-white/20"
                 />
-                <div className="absolute -bottom-6 -left-6 z-20 bg-primary/95 border border-accent/40 text-white p-4 rounded-xl shadow-xl backdrop-blur-md max-w-xs hidden sm:block">
-                  <p className="text-xs text-accent font-bold uppercase tracking-wider mb-1">
+                <div className="absolute -bottom-4 -left-4 z-20 bg-primary/95 border border-accent/40 text-white p-3.5 rounded-xl shadow-xl backdrop-blur-md max-w-[240px]">
+                  <p className="text-[11px] text-accent font-bold uppercase tracking-wider mb-0.5">
                     Resultado Central
                   </p>
-                  <p className="text-sm font-medium leading-snug">
-                    Transforme conhecimentos soltos em um ecossistema inteligente de ofertas de alto
-                    valor.
+                  <p className="text-xs font-medium leading-snug text-gray-200">
+                    Transforme conhecimentos soltos em um ecossistema inteligente de ofertas.
                   </p>
                 </div>
               </div>
@@ -150,177 +228,166 @@ export default function Index() {
         </div>
 
         <div
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 text-white/50 animate-bounce cursor-pointer"
+          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 text-white/50 hover:text-accent transition-colors animate-bounce cursor-pointer"
           onClick={() => scrollTo('conceito')}
+          aria-label="Rolar para baixo"
         >
-          <ArrowDown size={28} />
+          <ArrowDown size={24} />
         </div>
       </section>
 
-      {/* 2. CONCEITO DO PRODUTO */}
-      <section id="conceito" className="py-20 md:py-28 bg-white border-b border-gray-100">
+      {/* 2. CONCEITO DO PROGRAMA — CONDENSADO E DIRETO */}
+      <section id="conceito" className="py-16 md:py-20 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <ScrollReveal>
-              <div className="text-center mb-12">
-                <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">
+              <div className="text-center mb-10">
+                <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-2 block">
                   O Conceito do Programa
                 </span>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
-                  Mais do que criar novos produtos: organizar o que você já sabe em uma{' '}
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
+                  Mais do que criar novos produtos: organizar sua expertise em uma{' '}
                   <span className="text-accent">arquitetura de valor</span>
                 </h2>
+                <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                  Para especialistas e empreendedores que já entregam resultados de alto nível, mas
+                  ainda comercializam soluções isoladas, sem conexão estratégica.
+                </p>
               </div>
             </ScrollReveal>
 
-            <ScrollReveal delay={150}>
-              <div className="bg-gray-50 border border-gray-200/80 rounded-3xl p-8 md:p-12 shadow-sm space-y-6 text-gray-700 text-lg leading-relaxed">
-                <p>
-                  O <strong className="text-primary font-bold">Esteira de Valor 5D</strong> é um
-                  programa desenvolvido para empreendedores, especialistas, consultores e
-                  prestadores de serviços que possuem conhecimento, experiência e capacidade de
-                  entrega, mas ainda comercializam seus produtos e serviços de forma isolada, sem
-                  uma arquitetura estratégica que conecte suas ofertas.
-                </p>
-                <p>
-                  O objetivo é transformar conhecimentos, competências, serviços e soluções já
-                  existentes em uma esteira estruturada de valor, criando uma jornada lógica para o
-                  cliente e uma estratégia comercial mais clara.
-                </p>
-                <div className="bg-white p-6 rounded-2xl border-l-4 border-accent shadow-sm my-4">
-                  <p className="text-primary font-semibold text-lg md:text-xl">
-                    Mais do que criar novos produtos, ensina o empreendedor a organizar aquilo que
-                    já sabe, identificar novas oportunidades e construir ofertas capazes de se
-                    complementar. O cliente deixa de comprar apenas uma solução pontual e passa a
-                    percorrer uma jornada dentro do ecossistema do negócio.
+            <ScrollReveal delay={100}>
+              <div className="grid sm:grid-cols-3 gap-4 mb-6">
+                <div className="bg-gray-50 border border-gray-200/80 rounded-2xl p-5 text-center">
+                  <div className="w-10 h-10 rounded-xl bg-accent/15 text-accent flex items-center justify-center mx-auto mb-3 font-bold text-base">
+                    1
+                  </div>
+                  <h3 className="font-bold text-primary text-sm mb-1.5">
+                    Organizar o Conhecimento
+                  </h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Mapeie competências e serviços existentes em ativos comerciais claros.
                   </p>
                 </div>
+                <div className="bg-gray-50 border border-gray-200/80 rounded-2xl p-5 text-center">
+                  <div className="w-10 h-10 rounded-xl bg-accent/15 text-accent flex items-center justify-center mx-auto mb-3 font-bold text-base">
+                    2
+                  </div>
+                  <h3 className="font-bold text-primary text-sm mb-1.5">Conectar as Ofertas</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Crie uma jornada lógica onde cada solução conduz naturalmente à próxima.
+                  </p>
+                </div>
+                <div className="bg-gray-50 border border-gray-200/80 rounded-2xl p-5 text-center">
+                  <div className="w-10 h-10 rounded-xl bg-accent/15 text-accent flex items-center justify-center mx-auto mb-3 font-bold text-base">
+                    3
+                  </div>
+                  <h3 className="font-bold text-primary text-sm mb-1.5">Destravar a Recorrência</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    O cliente deixa de comprar pontualmente e entra em um ecossistema contínuo.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-primary/5 border-l-4 border-accent p-5 rounded-r-2xl">
+                <p className="text-primary font-semibold text-sm sm:text-base leading-relaxed">
+                  "O cliente deixa de comprar apenas uma solução pontual e passa a percorrer uma
+                  jornada lógica dentro do ecossistema do seu negócio."
+                </p>
               </div>
             </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* 3. A DOR (LISTA DE DORES + DOR CENTRAL) */}
-      <section id="dores" className="py-24 md:py-32 bg-gray-50">
+      {/* 3. A DOR — CONDENSADA: SINTOMAS PRINCIPAIS + DOR CENTRAL + EXPANSÃO OPCIONAL */}
+      <section id="dores" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-2 block">
                 O Cenário Real
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
-                Você tem expertise e entrega bons resultados, mas suas ofertas estão{' '}
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
+                Você entrega excelentes resultados, mas suas ofertas estão{' '}
                 <span className="text-red-500">soltas</span> no mercado?
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Muitos empreendedores têm alto conhecimento técnico e excelentes soluções, mas
-                criados sem arquitetura comercial. Identifique se o seu negócio enfrenta esses
-                sintomas:
+              <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Ter alto conhecimento técnico sem uma arquitetura comercial gera desgaste
+                operacional e faturamento imprevisível.
               </p>
             </div>
           </ScrollReveal>
 
-          {/* Dores Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {[
-              {
-                title: 'Vende serviços isolados',
-                desc: 'Comercializa apenas o serviço que o cliente pede, sem uma continuidade pré-formatada.',
-              },
-              {
-                title: 'Cria produtos por oportunidade',
-                desc: 'Lança ofertas conforme surgem ideias ou pedidos, sem conexão estratégica com o restante do portfólio.',
-              },
-              {
-                title: 'Ofertas que não conversam entre si',
-                desc: 'Possui várias opções e soluções, mas nenhuma conduz naturalmente à outra.',
-              },
-              {
-                title: 'Não sabe qual é o produto principal',
-                desc: 'Falta definição clara do que é carro-chefe e qual oferta gera o maior impacto no negócio.',
-              },
-              {
-                title: 'Sem jornada clara para o cliente',
-                desc: 'Não existe um caminho lógico para o cliente subir de nível dentro da sua empresa.',
-              },
-              {
-                title: 'Novo cliente a cada venda',
-                desc: 'Todo mês precisa conquistar um novo cliente do zero para fechar a conta do faturamento.',
-              },
-              {
-                title: 'Perde oportunidades de recorrência',
-                desc: 'Clientes que adoraram o serviço acabam indo embora porque não existe uma oferta de continuidade.',
-              },
-              {
-                title: 'Dificuldade em ofertas premium',
-                desc: 'Não sabe como desenhar uma solução de alto valor agregado com acompanhamento e personalização.',
-              },
-              {
-                title: 'Conhecimento não empacotado',
-                desc: 'Muita experiência acumulada na mente, mas dificuldade para transformar isso em produtos e métodos.',
-              },
-              {
-                title: 'Escopo e entregáveis confusos',
-                desc: 'Dificuldade de estruturar método, limites de escopo e entregáveis transparentes para o comprador.',
-              },
-              {
-                title: 'Precifica olhando para horas',
-                desc: 'Preço ancorado na execução do tempo de trabalho, e não no valor gerado pela solução.',
-              },
-              {
-                title: 'Entrega muito e captura pouco valor',
-                desc: 'O cliente obtém um resultado gigantesco, mas a remuneração capturada pelo negócio é mínima.',
-              },
-              {
-                title: 'Dependência da própria presença',
-                desc: 'O faturamento trava porque tudo exige a presença física e o tempo direto do especialista.',
-              },
-              {
-                title: 'Crescer sem dobrar carga horária',
-                desc: 'Sensação de que aumentar o faturamento exigirá trabalhar até a exaustão.',
-              },
-              {
-                title: 'Recompra travada',
-                desc: 'Clientes que poderiam comprar novamente saem porque não existe a próxima oferta estruturada.',
-              },
-            ].map((pain, idx) => (
+          {/* Dores Principais em 4 Cards Compactos */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-6">
+            {MAIN_PAINS.map((pain, idx) => (
               <ScrollReveal
                 key={idx}
-                delay={(idx % 3) * 100}
-                className="bg-white p-7 rounded-2xl border border-gray-100 shadow-sm hover:border-red-200 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+                delay={idx * 80}
+                className="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm hover:border-red-200 hover:shadow-md transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center mb-4">
-                    <XCircle className="w-5 h-5" />
+                  <div className="w-8 h-8 bg-red-50 text-red-500 rounded-lg flex items-center justify-center mb-3">
+                    <XCircle className="w-4 h-4" />
                   </div>
-                  <h3 className="text-lg font-bold text-primary mb-2">{pain.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{pain.desc}</p>
+                  <h3 className="text-base font-bold text-primary mb-1.5">{pain.title}</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">{pain.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
           </div>
 
-          {/* Dor Central Highlight Box */}
-          <ScrollReveal delay={200} className="mt-14 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-primary to-[#18233C] text-white p-8 md:p-10 rounded-3xl border border-accent/30 shadow-xl relative overflow-hidden">
+          {/* Dores Complementares (Colapsáveis para não poluir o topo) */}
+          <div className="max-w-5xl mx-auto text-center mb-10">
+            {showAllPains && (
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 text-left animate-fade-in">
+                {OTHER_PAINS.map((pain, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-white p-4 rounded-xl border border-gray-200 text-xs text-gray-700 shadow-sm"
+                  >
+                    <div className="flex items-center gap-2 mb-1">
+                      <XCircle className="w-3.5 h-3.5 text-red-500 shrink-0" />
+                      <strong className="text-primary text-sm">{pain.title}</strong>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed pl-5">{pain.desc}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            <button
+              onClick={() => setShowAllPains(!showAllPains)}
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-primary hover:text-accent transition-colors px-4 py-2 rounded-lg border border-gray-300 hover:border-accent bg-white shadow-xs"
+            >
+              <span>{showAllPains ? 'Ocultar outros sintomas' : 'Ver outros sintomas comuns'}</span>
+              <ChevronDown
+                size={16}
+                className={`transition-transform duration-200 ${showAllPains ? 'rotate-180' : ''}`}
+              />
+            </button>
+          </div>
+
+          {/* Dor Central Highlight Box — Compacta e de Forte Impacto */}
+          <ScrollReveal delay={150} className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-primary to-[#18233C] text-white p-6 sm:p-8 rounded-2xl border border-accent/30 shadow-lg relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl pointer-events-none"></div>
               <div className="flex items-start gap-4">
-                <div className="bg-accent/20 p-3 rounded-2xl text-accent shrink-0">
-                  <ShieldAlert className="w-8 h-8" />
+                <div className="bg-accent/20 p-2.5 rounded-xl text-accent shrink-0">
+                  <ShieldAlert className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-accent text-xs md:text-sm font-bold tracking-widest uppercase block mb-2">
+                  <span className="text-accent text-[11px] sm:text-xs font-bold tracking-widest uppercase block mb-1">
                     A Dor Central Resumida
                   </span>
-                  <blockquote className="text-xl md:text-2xl font-semibold leading-snug italic text-white mb-4">
+                  <blockquote className="text-base sm:text-xl font-semibold leading-snug italic text-white mb-2">
                     "Tenho conhecimento, produtos e serviços, mas ainda não transformei tudo isso em
                     uma estrutura comercial estratégica."
                   </blockquote>
-                  <blockquote className="text-lg md:text-xl font-normal leading-snug text-gray-300 italic">
+                  <p className="text-xs sm:text-sm text-gray-300 italic">
                     "Meu negócio possui várias ofertas, mas não existe uma estratégia que faça o
                     cliente continuar comprando."
-                  </blockquote>
+                  </p>
                 </div>
               </div>
             </div>
@@ -328,74 +395,64 @@ export default function Index() {
         </div>
       </section>
 
-      {/* 4. A TRANSFORMAÇÃO (ANTES X DEPOIS) */}
-      <section id="transformacao" className="py-24 md:py-32 bg-white">
+      {/* 4. A TRANSFORMAÇÃO (ANTES X DEPOIS) — CONDENSADA */}
+      <section id="transformacao" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <ScrollReveal>
-              <div className="text-center mb-16">
-                <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">
+              <div className="text-center mb-12">
+                <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-2 block">
                   A Virada de Chave
                 </span>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3">
                   A Grande Transformação: do ciclo cansativo ao{' '}
                   <span className="text-accent">ecossistema de valor</span>
                 </h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Veja a diferença radical na dinâmica do seu negócio quando você implementa uma
-                  arquitetura comercial estruturada.
+                <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
+                  A diferença radical de operar com uma arquitetura comercial estruturada:
                 </p>
               </div>
             </ScrollReveal>
 
-            <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            <div className="grid md:grid-cols-2 gap-6 items-stretch">
               {/* ANTES */}
               <ScrollReveal
                 animation="animate-fade-in-right"
-                className="bg-gray-50 border-2 border-red-100 rounded-3xl p-8 md:p-10 flex flex-col justify-between shadow-sm"
+                className="bg-gray-50 border-2 border-red-100 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xs"
               >
                 <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-bold uppercase tracking-wider mb-6">
-                    <XCircle className="w-4 h-4" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-red-100 text-red-700 text-[11px] font-bold uppercase tracking-wider mb-4">
+                    <XCircle className="w-3.5 h-3.5" />
                     Como funciona hoje (Antes)
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4">
                     O ciclo recomeça do zero a cada cliente
                   </h3>
 
-                  <div className="bg-white p-5 rounded-2xl border border-gray-200 mb-6 font-mono text-xs sm:text-sm text-gray-700 leading-relaxed shadow-inner">
+                  <div className="bg-white p-3.5 rounded-xl border border-gray-200 mb-5 font-mono text-xs text-gray-700 leading-relaxed shadow-inner">
                     Conhecimento <span className="text-red-500 font-bold">→</span> Serviço{' '}
                     <span className="text-red-500 font-bold">→</span> Venda{' '}
                     <span className="text-red-500 font-bold">→</span> Execução{' '}
-                    <span className="text-red-500 font-bold">→</span> Busca por outro cliente
+                    <span className="text-red-500 font-bold">→</span> Recomeço do zero
                   </div>
 
-                  <ul className="space-y-4 text-gray-600 text-base">
-                    <li className="flex items-start gap-3">
-                      <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                  <ul className="space-y-3 text-gray-600 text-xs sm:text-sm">
+                    <li className="flex items-start gap-2.5">
+                      <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
                       <span>Vende o que aparece, reagindo à demanda externa</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                      <span>
-                        Pensa sempre: <em>"O que eu posso vender agora?"</em>
-                      </span>
+                    <li className="flex items-start gap-2.5">
+                      <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                      <span>Opera com catálogo disperso de produtos desconectados</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                      <span>Opera com um catálogo disperso de produtos desconectados</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                      <span>
-                        Serviços isolados + vendas pontuais + dependência constante de novos
-                        clientes
-                      </span>
+                    <li className="flex items-start gap-2.5">
+                      <XCircle className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+                      <span>Dependência constante de novos clientes todo mês</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-gray-200 text-sm text-gray-500 italic">
+                <div className="mt-6 pt-4 border-t border-gray-200 text-xs text-gray-500 italic">
                   Resultado: alto desgaste operacional e faturamento imprevisível.
                 </div>
               </ScrollReveal>
@@ -403,56 +460,42 @@ export default function Index() {
               {/* DEPOIS */}
               <ScrollReveal
                 animation="animate-fade-in-left"
-                className="bg-primary text-white border-2 border-accent/40 rounded-3xl p-8 md:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden"
+                className="bg-primary text-white border-2 border-accent/40 rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xl relative overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-40 h-40 bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl pointer-events-none"></div>
                 <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent text-primary text-xs font-bold uppercase tracking-wider mb-6">
-                    <CheckCircle2 className="w-4 h-4" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent text-primary text-[11px] font-bold uppercase tracking-wider mb-4">
+                    <CheckCircle2 className="w-3.5 h-3.5" />
                     Com a Esteira de Valor 5D (Depois)
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-4">
                     Uma jornada estruturada que conduz o cliente
                   </h3>
 
-                  <div className="bg-[#18233C] p-5 rounded-2xl border border-accent/30 mb-6 font-mono text-xs sm:text-sm text-accent leading-relaxed shadow-inner font-semibold">
+                  <div className="bg-[#18233C] p-3.5 rounded-xl border border-accent/30 mb-5 font-mono text-xs text-accent leading-relaxed shadow-inner font-semibold">
                     Posicionamento → Entrada → Solução Principal → Recorrência → Premium →
                     Continuidade
                   </div>
 
-                  <ul className="space-y-4 text-gray-200 text-base">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                      <span>
-                        Deixa de vender o que aparece e passa a conduzir estrategicamente o cliente
-                      </span>
+                  <ul className="space-y-3 text-gray-200 text-xs sm:text-sm">
+                    <li className="flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span>Condução estratégica do cliente da primeira compra ao premium</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                      <span>
-                        Passa a pensar:{' '}
-                        <em>"Qual é a próxima solução que o meu cliente naturalmente precisa?"</em>
-                      </span>
+                    <li className="flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span>Arquitetura de valor em vez de catálogo desconectado</span>
                     </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                      <span>
-                        O negócio deixa de ter um catálogo e passa a ter uma arquitetura de valor
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                      <span>
-                        Posicionamento + arquitetura de produtos + jornada do cliente + continuidade
-                        + oferta premium
-                      </span>
+                    <li className="flex items-start gap-2.5">
+                      <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                      <span>Previsibilidade de faturamento com recompra e continuidade</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-white/10 text-sm text-accent font-medium">
+                <div className="mt-6 pt-4 border-t border-white/10 text-xs text-accent font-medium">
                   Em essência: Você deixa de vender o que aparece e passa a conduzir
-                  estrategicamente o cliente por uma jornada de valor.
+                  estrategicamente o cliente.
                 </div>
               </ScrollReveal>
             </div>
