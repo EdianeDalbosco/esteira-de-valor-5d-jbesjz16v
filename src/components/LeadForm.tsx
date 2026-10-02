@@ -10,7 +10,7 @@ import { useToast } from '@/hooks/use-toast'
 import { createLead } from '@/services/leads'
 import { extractFieldErrors, type FieldErrors } from '@/lib/pocketbase/errors'
 
-import { WHATSAPP_DIRECT_URL, getWhatsAppUrl } from '@/config/whatsapp'
+import { WHATSAPP_LINK, WHATSAPP_MESSAGES } from '@/lib/constants'
 
 export function LeadForm({ diagnosticResult }: { diagnosticResult?: string }) {
   const [name, setName] = useState('')
@@ -184,10 +184,10 @@ export function LeadForm({ diagnosticResult }: { diagnosticResult?: string }) {
             <a
               href={
                 diagnosticResult
-                  ? getWhatsAppUrl(
-                      `Olá! Gostaria de falar com a equipe estratégica da EDVANCED sobre a Esteira de Valor 5D (${diagnosticResult}).`,
+                  ? WHATSAPP_LINK(
+                      `Olá! Acabei de me inscrever no Esteira de Valor 5D e quero confirmar meu horário da Chamada Estratégica (${diagnosticResult}).`,
                     )
-                  : WHATSAPP_DIRECT_URL
+                  : WHATSAPP_LINK(WHATSAPP_MESSAGES.confirmarHorario)
               }
               target="_blank"
               rel="noopener noreferrer"

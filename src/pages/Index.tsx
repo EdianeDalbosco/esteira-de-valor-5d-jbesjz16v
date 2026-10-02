@@ -29,7 +29,9 @@ import {
 import mentorImage from '@/assets/as-portas-estao-1-21a63.png'
 import heroPhoto from '@/assets/img7990-74f78.jpg'
 
-import { WHATSAPP_URL } from '@/config/whatsapp'
+import { WHATSAPP_LINK, WHATSAPP_MESSAGES } from '@/lib/constants'
+
+export const WHATSAPP_URL = WHATSAPP_LINK(WHATSAPP_MESSAGES.garantirVaga)
 
 const SITE_TITLE =
   'EDVANCED | Esteira de Valor 5D — Do serviço solto à jornada estratégica de valor'

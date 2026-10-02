@@ -5,7 +5,16 @@ import { cn } from '@/lib/utils'
 import logoImage from '@/assets/logo-edvanced-17-7aa6b.png'
 import { useAuth } from '@/hooks/use-auth'
 
-import { WHATSAPP_URL, WHATSAPP_PHONE, PHONE_DISPLAY, ADDRESS_TEXT } from '@/config/whatsapp'
+import {
+  WHATSAPP_NUMBER,
+  PHONE_DISPLAY,
+  ADDRESS_TEXT,
+  WHATSAPP_LINK,
+  WHATSAPP_MESSAGES,
+} from '@/lib/constants'
+
+// URL para retrocompatibilidade caso algum componente externo acesse WHATSAPP_URL
+export const WHATSAPP_URL = WHATSAPP_LINK(WHATSAPP_MESSAGES.garantirVaga)
 
 export default function Layout() {
   const [scrolled, setScrolled] = useState(false)
@@ -94,7 +103,7 @@ export default function Layout() {
               Contato
             </button>
             <a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_LINK(WHATSAPP_MESSAGES.garantirVaga)}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2.5 bg-accent text-primary text-sm font-bold rounded hover:bg-accent/90 transition-all shadow-lg hover:shadow-accent/40 transform hover:-translate-y-0.5"
@@ -171,7 +180,7 @@ export default function Layout() {
             )}
             <div className="px-6 pt-4 pb-6">
               <a
-                href={WHATSAPP_URL}
+                href={WHATSAPP_LINK(WHATSAPP_MESSAGES.garantirVaga)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center py-4 bg-accent text-primary font-bold rounded shadow-md"
@@ -263,14 +272,14 @@ export default function Layout() {
           <div className="md:col-span-4 space-y-5">
             <h4 className="font-bold text-gray-200 mb-2">Contato</h4>
             <a
-              href={`tel:+${WHATSAPP_PHONE}`}
+              href={`tel:+${WHATSAPP_NUMBER}`}
               className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors"
             >
               <Phone size={18} className="text-accent shrink-0" />
               <span>{PHONE_DISPLAY}</span>
             </a>
             <a
-              href={WHATSAPP_URL}
+              href={WHATSAPP_LINK(WHATSAPP_MESSAGES.rodape)}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors"
@@ -323,7 +332,7 @@ export default function Layout() {
 
       {/* Botão Flutuante Oficial do WhatsApp */}
       <a
-        href={WHATSAPP_URL}
+        href={WHATSAPP_LINK(WHATSAPP_MESSAGES.rodape)}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp"
