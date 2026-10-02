@@ -15,11 +15,6 @@ import {
   AlertTriangle,
   ArrowDown,
   Layers,
-  Repeat,
-  Crown,
-  FastForward,
-  Magnet,
-  ShoppingBag,
   TrendingUp,
   FileCheck2,
   ShieldAlert,
@@ -893,104 +888,6 @@ export default function Index() {
                 </div>
               </div>
             </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* 9. ARQUITETURA DA ESTEIRA (SEÇÃO VISUAL EM ESTEIRA) */}
-      <section id="arquitetura" className="py-24 md:py-32 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <ScrollReveal>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-accent font-bold tracking-widest uppercase text-xs md:text-sm mb-3 block">
-                A Jornada do Cliente
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
-                Arquitetura da <span className="text-accent">Esteira de Valor</span>
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Cada oferta ocupa uma função estratégica específica. Conheça as 6 camadas do
-                ecossistema que conectam a atração até a continuidade de longo prazo:
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* Grid dos 6 Estágios da Esteira */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                step: '01',
-                name: 'ATRAÇÃO',
-                role: 'Porta de Entrada Gratuita / Conteúdo',
-                desc: 'Conteúdo estratégico, diagnóstico, material estruturado, evento ou experiência com alto valor percebido que atrai o público certo.',
-                icon: <Magnet className="w-6 h-6" />,
-                accentColor: 'border-blue-400',
-              },
-              {
-                step: '02',
-                name: 'ENTRADA',
-                role: 'Primeira Experiência Paga',
-                desc: 'Primeira solução de baixo risco financeiro e alta entrega que quebra a barreira da primeira compra e transforma leads em clientes.',
-                icon: <ShoppingBag className="w-6 h-6" />,
-                accentColor: 'border-emerald-400',
-              },
-              {
-                step: '03',
-                name: 'SOLUÇÃO PRINCIPAL',
-                role: 'Carro-Chefe de Transformação',
-                desc: 'O produto ou serviço responsável pela principal transformação do cliente. O coração financeiro e de autoridade do seu negócio.',
-                icon: <Target className="w-6 h-6" />,
-                accentColor: 'border-accent',
-              },
-              {
-                step: '04',
-                name: 'RECORRÊNCIA',
-                role: 'Acompanhamento & Manutenção',
-                desc: 'Solução contínua de acompanhamento, supervisão, manutenção ou evolução que garante previsibilidade de caixa mensal para a empresa.',
-                icon: <Repeat className="w-6 h-6" />,
-                accentColor: 'border-indigo-400',
-              },
-              {
-                step: '05',
-                name: 'PREMIUM',
-                role: 'Alta Margem & Proximidade',
-                desc: 'Oferta com maior profundidade, personalização, proximidade ou mentoria individual para os clientes que demandam máxima exclusividade.',
-                icon: <Crown className="w-6 h-6" />,
-                accentColor: 'border-amber-500',
-              },
-              {
-                step: '06',
-                name: 'CONTINUIDADE',
-                role: 'Próximo Ciclo de Crescimento',
-                desc: 'O próximo estágio de evolução para clientes que concluíram as fases anteriores e querem continuar avançando no seu ecossistema.',
-                icon: <FastForward className="w-6 h-6" />,
-                accentColor: 'border-purple-500',
-              },
-            ].map((card, idx) => (
-              <ScrollReveal
-                key={idx}
-                delay={idx * 100}
-                className="bg-white rounded-3xl p-8 border-2 border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-3xl font-black text-gray-200">{card.step}</span>
-                    <div className="w-12 h-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center">
-                      {card.icon}
-                    </div>
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-accent block mb-1">
-                    {card.role}
-                  </span>
-                  <h3 className="text-2xl font-bold text-primary mb-4">{card.name}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{card.desc}</p>
-                </div>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center text-xs font-bold text-primary">
-                  Conexão estratégica na esteira
-                  <ArrowRight className="w-4 h-4 ml-1 text-accent" />
-                </div>
-              </ScrollReveal>
-            ))}
           </div>
         </div>
       </section>

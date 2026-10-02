@@ -51,15 +51,6 @@ export default function Layout() {
               Método 5D
             </button>
             <button
-              onClick={() => scrollTo('arquitetura')}
-              className={cn(
-                'text-sm font-semibold hover:text-accent transition-colors',
-                scrolled ? 'text-gray-700' : 'text-white/90',
-              )}
-            >
-              Arquitetura da Esteira
-            </button>
-            <button
               onClick={() => scrollTo('entregaveis')}
               className={cn(
                 'text-sm font-semibold hover:text-accent transition-colors',
@@ -134,12 +125,6 @@ export default function Layout() {
               Método 5D
             </button>
             <button
-              onClick={() => scrollTo('arquitetura')}
-              className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
-            >
-              Arquitetura da Esteira
-            </button>
-            <button
               onClick={() => scrollTo('entregaveis')}
               className="px-6 py-4 text-left font-semibold text-primary hover:bg-gray-50 border-b border-gray-100"
             >
@@ -212,14 +197,6 @@ export default function Layout() {
                   className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
                   O Método 5D
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollTo('arquitetura')}
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Arquitetura da Esteira
                 </button>
               </li>
               <li>
